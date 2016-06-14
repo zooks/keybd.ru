@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Online Конвертирование текста, набранного в неправильной раскладке (RU-En, En-RU)</title>
@@ -17,13 +17,11 @@
   </head>
   <body>
     <main class="container">
-      <h2 class="gray">Исправление текста в неправильной раскладке</h2>
-      <table>
-        <tr>
-          <td><b>Пример:</b></td>
-          <td>Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</td>
-        </tr>
-      </table><br>
+      <h2 class="text-muted">Исправление текста в неправильной раскладке</h2>
+      <div class="row">
+        <div class="col-sm-1"><b>Пример:</b></div>
+        <div class="col-sm-2">Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</div>
+      </div><br>
       <form class="form-horizontal">
         <div class="row">
           <div class="col-sm-6">
@@ -37,16 +35,18 @@
             </fieldset>
           </div>
         </div>
-        <div class="row">В какую раскладку сконвертировать:
-          <select name="lang">
-            <option>Авто</option>
-            <option>Кириллица</option>
-            <option>Латиница</option>
-          </select>
-          <input class="btn btn-primary" type="button" value="Старт!" onclick="convert(this.form)">
+        <div class="row">
+          <fieldset class="form-group">
+            <label for="lang">В какую раскладку сконвертировать:</label>
+            <select class="c-select" id="lang">
+              <option>Авто</option>
+              <option>Кириллица</option>
+              <option>Латиница</option>
+            </select>
+            <input class="btn btn-info" type="button" value="Старт!" onclick="convert(this.form)">
+          </fieldset>
         </div><br><br><br>
-        <!-- h3 Почему наш кодировщик лучше других аналогов?-->
-        <div class="gray"><b>Особенности кодировщика:</b>
+        <div class="text-muted"><b>Особенности кодировщика:</b>
           <ul>
             <li>Введенные данные не отправляются на сервер, поэтому:
               <ol>
@@ -58,18 +58,6 @@
           </ul>
         </div>
       </form>
-      <!-- begin of Rambler's Top100 code--><a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?568486" alt="" width="1" height="1" style="border:0"></a>
-      <!-- end of Top100 code-->
-      <!-- Openstat--><span id="openstat2184317"></span>
-      <script>
-        var openstat = { counter: 2184317, next: openstat };
-        (function(d, t, p) {
-        var j = d.createElement(t); j.async = true; j.type = "text/javascript";
-        j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
-        var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
-        })(document, "script", document.location.protocol);
-      </script>
-      <!-- /Openstat-->
     </main>
   </body>
 </html>

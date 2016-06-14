@@ -8,17 +8,17 @@ var FROM = "",
 function convert(f) {
     s = f.coded.value;
     if (f.lang.selectedIndex === 0) {
-        if (RUS.indexOf(s.charAt(1)) == -1) {
+        if (RUS.indexOf(s.charAt(1)) === -1) {
             FROM = ENG;
             TO = RUS;
         } else {
             FROM = RUS;
             TO = ENG;
         }
-    } else if (f.lang.selectedIndex == 1) {
+    } else if (f.lang.selectedIndex === 1) {
         FROM = ENG;
         TO = RUS;
-    } else if (f.lang.selectedIndex == 2) {
+    } else if (f.lang.selectedIndex === 2) {
         FROM = RUS;
         TO = ENG;
     }

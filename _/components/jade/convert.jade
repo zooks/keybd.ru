@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='ru')
   head
     meta(charset='UTF-8')
     title
@@ -17,15 +17,14 @@ html
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
   body
     main.container
-      h2.gray Исправление текста в неправильной раскладке
-      table
-        tr
-          td
-            b Пример:
-          td
-            | Ghbdtn! ⇒ Привет!
-            br
-            | Руддщ! ⇒ Hello!
+      h2.text-muted Исправление текста в неправильной раскладке
+      .row
+        .col-sm-1
+          b Пример:
+        .col-sm-2
+              | Ghbdtn! ⇒ Привет!
+              br
+              | Руддщ! ⇒ Hello!
       br
       form.form-horizontal
         .row
@@ -38,17 +37,18 @@ html
             fieldset.form-group
               textarea.form-control(name='decoded', cols='50', rows='12', readonly='')
         .row
-          | В какую раскладку сконвертировать:
-          select(name='lang')
-            option Авто
-            option Кириллица
-            option Латиница
-          input.btn.btn-primary(type='button', value='Старт!', onclick='convert(this.form)')
+          fieldset.form-group
+            label(for='lang') В какую раскладку сконвертировать:
+            select.c-select(id='lang')
+              option Авто
+              option Кириллица
+              option Латиница
+            input.btn.btn-info(type='button', value='Старт!', onclick='convert(this.form)')
         br
         br
         br
-        // h3 Почему наш кодировщик лучше других аналогов?
-        .gray
+        //- h3 Почему наш кодировщик лучше других аналогов?
+        .text-muted
           b Особенности кодировщика:
           ul
             li
@@ -60,17 +60,17 @@ html
               | Не нужно устанавливать на компьютер дополнительные программы,
               br
               |   просто добавьте страницу в закладки браузера
-      // begin of Rambler's Top100 code
-      a(href='http://top100.rambler.ru/top100/')
-        img(src='http://counter.rambler.ru/top100.cnt?568486', alt='', width='1', height='1', style='border:0')
-      // end of Top100 code
-      // Openstat
-      span#openstat2184317
-      script.
-        var openstat = { counter: 2184317, next: openstat };
-        (function(d, t, p) {
-        var j = d.createElement(t); j.async = true; j.type = "text/javascript";
-        j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
-        var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
-        })(document, "script", document.location.protocol);
-      // /Openstat
+      //- // begin of Rambler's Top100 code
+      //- a(href='http://top100.rambler.ru/top100/')
+      //-   img(src='http://counter.rambler.ru/top100.cnt?568486', alt='', width='1', height='1', style='border:0')
+      //- // end of Top100 code
+      //- // Openstat
+      //- span#openstat2184317
+      //- script.
+      //-   var openstat = { counter: 2184317, next: openstat };
+      //-   (function(d, t, p) {
+      //-   var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+      //-   j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+      //-   var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+      //-   })(document, "script", document.location.protocol);
+      //- // /Openstat
