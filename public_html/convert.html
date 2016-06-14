@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Online Конвертирование текста, набранного в неправильной раскладке (RU-En, En-RU)</title>
+    <meta name="keywords" content="раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, ">
+    <meta name="description" content="Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.">
+    <script src="js/convert.js"></script>
+    <link rel="stylesheet" href="css/convert.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bower_components/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <h2 class="gray">Исправление текста в неправильной раскладке</h2>
+      <table>
+        <tr>
+          <td><b>Пример:</b></td>
+          <td>Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</td>
+        </tr>
+      </table><br>
+      <form class="form-horizontal">
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <textarea class="form-control" name="coded" cols="50" rows="12">Вставьте текст в неправильной раскладке сюда и нажмите кнопку старт!</textarea><br><br>
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <textarea class="form-control" name="decoded" cols="50" rows="12" readonly=""></textarea>
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">В какую раскладку сконвертировать:
+          <select name="lang">
+            <option>Авто</option>
+            <option>Кириллица</option>
+            <option>Латиница</option>
+          </select>
+          <input class="btn btn-primary" type="button" value="Старт!" onclick="convert(this.form)">
+        </div><br><br><br>
+        <!-- h3 Почему наш кодировщик лучше других аналогов?-->
+        <div class="gray"><b>Особенности кодировщика:</b>
+          <ul>
+            <li>Введенные данные не отправляются на сервер, поэтому:
+              <ol>
+                <li>Исключена возможность прочтения вашего текста</li>
+                <li>Мгновенное кодирование без расходования трафика.</li>
+              </ol>
+            </li>
+            <li>Не нужно устанавливать на компьютер дополнительные программы,<br>  просто добавьте страницу в закладки браузера</li>
+          </ul>
+        </div>
+      </form>
+      <!-- begin of Rambler's Top100 code--><a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?568486" alt="" width="1" height="1" style="border:0"></a>
+      <!-- end of Top100 code-->
+      <!-- Openstat--><span id="openstat2184317"></span>
+      <script>
+        var openstat = { counter: 2184317, next: openstat };
+        (function(d, t, p) {
+        var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+        j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+        var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+        })(document, "script", document.location.protocol);
+      </script>
+      <!-- /Openstat-->
+    </main>
+  </body>
+</html>
