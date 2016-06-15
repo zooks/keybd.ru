@@ -1,29 +1,31 @@
-//copyright http://sovietera.net (ussr.km.ru) - пожалуйста, не крадите эту и другие страницы, а ставьте ссылку.
+// copyright http://typing.su (sovtime.ru)
 
-var rus = "абвгдеёжзийклмнопрстуфхцчшщъьыэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЭЮЯ\"№;:?/.,",
-    eng = "f,dult`;pbqrkvyjghcnea[wxio]ms'.zF<DULT~:PBQRKVYJGHCNEA{WXIO}MS'>Z\@#$^&|/?";
-var fromLang = "",
-    toLang = "";
+var langSymbols = {
+    rus: 'абвгдеёжзийклмнопрстуфхцчшщъьыэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЭЮЯ"№;:?/.,',
+    eng: 'f,dult`;pbqrkvyjghcnea[wxio]ms\'.zF<DULT~:PBQRKVYJGHCNEA{WXIO}MS\'>Z\@#$^&|/?'
+};
+var fromLang = '',
+    toLang = '';
 
 function convert(text, lang) {
-    var resultText = "";
+    var resultText = '';
     switch (lang) {
         case 0:
-            if (rus.indexOf(text.charAt(1)) === -1) {
-                fromLang = eng;
-                toLang = rus;
+            if (langSymbols.rus.indexOf(text.charAt(1)) === -1) {
+                fromLang = langSymbols.eng;
+                toLang = langSymbols.rus;
             } else {
-                fromLang = rus;
-                toLang = eng;
+                fromLang = langSymbols.rus;
+                toLang = langSymbols.eng;
             }
             break;
         case 1:
-            fromLang = eng;
-            toLang = rus;
+            fromLang = langSymbols.eng;
+            toLang = langSymbols.rus;
             break;
         case 2:
-            fromLang = rus;
-            toLang = eng;
+            fromLang = langSymbols.rus;
+            toLang = langSymbols.eng;
             break;
     }
     for (var i = 0; i < text.length; i++) {
@@ -35,31 +37,28 @@ function convert(text, lang) {
         }
     }
     return resultText;
-
-    //document.write(f.decoded.value);
 }
 
 function output(form) {
     form.decoded.value = convert(form.coded.value, form.lang.selectedIndex);
 }
 
-function input(form) {
-    area = form.coded;
-    button = document.getElementById('start-btn');
-
+function input(form, area, button) {
     area.addEventListener('input', function() {
         output(form);
     }, false);
-    button.addEventListener("click", output(form), false);
+
+    button.addEventListener('click', function() {
+        output(form);
+    }, false);
 }
 
-//- сделать нормальную обработку кавычек и двойного переключения раскладки
-
 function foo() {
-    var form = document.forms[0];
+    var form = document.getElementById('convert-form');//forms[0];
+    var area = form.coded;
     var button = document.getElementById('start-btn');
 
-    input(form);
+    input(form, area, button);
 }
 
 window.onload = foo;
