@@ -19,10 +19,10 @@
     <main class="container">
       <h2 class="text-muted">Исправление текста в неправильной раскладке</h2>
       <div class="row">
-        <div class="col-sm-1"><b>Пример:</b></div>
-        <div class="col-sm-2">Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</div>
+        <div class="col-xs-4 col-sm-2 col-lg-1"><b>Пример:</b></div>
+        <div class="col-xs-8 col-sm-4 col-lg-3">Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</div>
       </div><br>
-      <form class="form-horizontal">
+      <form class="form-horizontal" id="convert-form" name="convert-form">
         <div class="row">
           <div class="col-sm-6">
             <fieldset class="form-group">
@@ -31,7 +31,7 @@
           </div>
           <div class="col-sm-6">
             <fieldset class="form-group">
-              <textarea class="form-control" name="decoded" cols="50" rows="12" readonly=""></textarea>
+              <textarea class="form-control" name="decoded" cols="50" rows="12"></textarea>
             </fieldset>
           </div>
         </div>
@@ -43,7 +43,7 @@
               <option>Кириллица</option>
               <option>Латиница</option>
             </select>
-            <input class="btn btn-info" type="button" value="Старт!" onclick="convert(this.form)">
+            <input class="btn btn-info" id="start-btn" type="button" value="Старт!">
           </fieldset>
         </div><br><br><br>
         <div class="text-muted"><b>Особенности кодировщика:</b>
