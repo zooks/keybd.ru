@@ -17,7 +17,11 @@
   </head>
   <body>
     <main class="container">
-      <h2 class="text-muted">Исправление текста в неправильной раскладке</h2>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="text-muted">Исправление текста в неправильной раскладке</h2>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-4 col-sm-2 col-lg-1"><b>Пример:</b></div>
         <div class="col-xs-8 col-sm-4 col-lg-3">Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</div>
@@ -26,7 +30,7 @@
         <div class="row">
           <div class="col-sm-6">
             <fieldset class="form-group">
-              <textarea class="form-control" name="coded" cols="50" rows="12">Вставьте текст в неправильной раскладке сюда и нажмите кнопку старт!</textarea><br><br>
+              <textarea class="form-control" name="coded" cols="50" rows="12">Вставьте текст в неправильной раскладке сюда и нажмите кнопку старт!</textarea>
             </fieldset>
           </div>
           <div class="col-sm-6">
@@ -36,16 +40,30 @@
           </div>
         </div>
         <div class="row">
-          <fieldset class="form-group">
-            <label for="lang">В какую раскладку сконвертировать:</label>
-            <select class="c-select" id="lang">
-              <option>Авто</option>
-              <option>Кириллица</option>
-              <option>Латиница</option>
-            </select>
-            <input class="btn btn-info" id="start-btn" type="button" value="Старт!">
-          </fieldset>
-        </div><br><br><br>
+          <div class="col-sm-12">
+            <fieldset class="form-group">
+              <label for="lang2">В какую раскладку сконвертировать:</label>
+              <select class="c-select" id="lang2">
+                <option value="ru">ru</option>
+                <option value="en">en</option>
+                <option value="uk">uk</option>
+                <option value="be">be</option>
+                <option value="uz">uz</option>
+                <option value="kk">kk</option>
+                <option value="az">az</option>
+                <option value="lt">lt</option>
+                <option value="mo">mo</option>
+                <option value="lv">lv</option>
+                <option value="ky">ky</option>
+                <option value="tg">tg</option>
+                <option value="hy">hy</option>
+                <option value="tk">tk</option>
+                <option value="et">et</option>
+              </select>
+              <input class="btn btn-info" id="start-btn" type="button" value="Старт!">
+            </fieldset>
+          </div>
+        </div>
         <div class="text-muted"><b>Особенности кодировщика:</b>
           <ul>
             <li>Введенные данные не отправляются на сервер, поэтому:
@@ -58,6 +76,9 @@
           </ul>
         </div>
       </form>
+      <footer>
+        <p class="text-muted">© 2008–2016</p>
+      </footer>
     </main>
   </body>
 </html>

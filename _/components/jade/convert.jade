@@ -17,7 +17,9 @@ html(lang='ru')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
   body
     main.container
-      h2.text-muted Исправление текста в неправильной раскладке
+      .row
+        .col-sm-12
+          h2.text-muted Исправление текста в неправильной раскладке
       .row
         .col-xs-4.col-sm-2.col-lg-1
           b Пример:
@@ -31,23 +33,21 @@ html(lang='ru')
           .col-sm-6
             fieldset.form-group
               textarea.form-control(name='coded', cols='50', rows='12') Вставьте текст в неправильной раскладке сюда и нажмите кнопку старт!
-              br
-              br
           .col-sm-6
             fieldset.form-group
               textarea.form-control(name='decoded', cols='50', rows='12')
               //- readonly
         .row
-          fieldset.form-group
-            label(for='lang') В какую раскладку сконвертировать:
-            select.c-select(id='lang')
-              option Авто
-              option Кириллица
-              option Латиница
-            input#start-btn.btn.btn-info(type='button', value='Старт!')
-        br
-        br
-        br
+          .col-sm-12
+            fieldset.form-group
+              label(for='lang2') В какую раскладку сконвертировать:
+              select.c-select(id='lang2')
+                each val in ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
+                  option(value=val)=val
+                //- option Авто
+                //- option Кириллица
+                //- option Латиница
+              input#start-btn.btn.btn-info(type='button', value='Старт!')
         //- h3 Почему наш кодировщик лучше других аналогов?
         .text-muted
           b Особенности кодировщика:
@@ -75,3 +75,6 @@ html(lang='ru')
       //-   var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
       //-   })(document, "script", document.location.protocol);
       //- // /Openstat
+
+      footer
+        p.text-muted © 2008–2016
