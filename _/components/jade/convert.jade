@@ -1,3 +1,5 @@
+- var lang = ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
+- var langName = ['Русский', 'Английский', 'Украинский', 'Белорусский', 'Узбекский', 'Казахский', 'Азербайджанский', 'Литовский', 'Молдавкий', 'Латышский', 'Киргизский', 'Таджикский', 'Армянский', 'Туркменский', 'Эстонский']
 doctype html
 html(lang='ru')
   head
@@ -38,12 +40,19 @@ html(lang='ru')
               textarea.form-control(name='decoded', cols='50', rows='12')
               //- readonly
         .row
-          .col-sm-12
+          .col-sm-6
+            fieldset.form-group
+              label(for='lang1') Исходный язык:
+              select.c-select(id='lang1')
+                option(value='auto', selected) Авто
+                each val, index in lang
+                  option(value=val)=langName[index]
+          .col-sm-6
             fieldset.form-group
               label(for='lang2') В какую раскладку сконвертировать:
               select.c-select(id='lang2')
-                each val in ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
-                  option(value=val)=val
+                each val, index in lang
+                  option(value=val)=langName[index]
                 //- option Авто
                 //- option Кириллица
                 //- option Латиница

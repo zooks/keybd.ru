@@ -21,23 +21,22 @@ var langSymbols = {
 var fromLang = '',
     toLang = '';
 
-function convert(text, lang2) {
+function convert(text, lang1, lang2) {
     var resultText = '';
-    // switch (lang) {
-    //     case 0:
-    //         if (langSymbols.ru.indexOf(text.charAt(1)) === -1) {
-    //             fromLang = langSymbols.en;
-    //             toLang = langSymbols.ru;
-    //         } else {
-    //             fromLang = langSymbols.ru;
-    //             toLang = langSymbols.en;
-    //         }
-    //         break;
-    //     case 1:
+
+    if (lang1 === 'auto') {
+        if (langSymbols[lang2].indexOf(text.charAt(1)) === -1) {
             fromLang = langSymbols.en;
             toLang = langSymbols[lang2];
-    //         break;
-    // }
+        } else {
+            fromLang = langSymbols[lang2];
+            toLang = langSymbols.en;
+        }
+    } else {
+      fromLang = langSymbols[lang1];
+      toLang = langSymbols[lang2];
+    }
+
     for (var i = 0; i < text.length; i++) {
         var j = fromLang.indexOf(text.charAt(i));
         if (j < 0) {
@@ -50,7 +49,7 @@ function convert(text, lang2) {
 }
 
 function output(form) {
-    form.decoded.value = convert(form.coded.value, form.lang2.value);
+    form.decoded.value = convert(form.coded.value, form.lang1.value, form.lang2.value);
 }
 
 function input(form, area, button) {
