@@ -54,23 +54,32 @@ function convert(text, lang1, lang2) {
 function output(form) {
     form.decoded.value = convert(form.coded.value, form.lang1.value, form.lang2.value);
 }
+function clear(form) {
+    form.decoded.value = '';
+    form.coded.value = '';
+}
 
-function input(form, area, button) {
+function input(form, area, buttonStart, buttonClear) {
     area.addEventListener('input', function() {
         output(form);
     }, false);
 
-    button.addEventListener('click', function() {
+    buttonStart.addEventListener('click', function() {
         output(form);
+    }, false);
+
+    buttonClear.addEventListener('click', function() {
+        clear(form);
     }, false);
 }
 
 function onLoad() {
     var form = document.getElementById('convert-form');//forms[0];
     var area = form.coded;
-    var button = document.getElementById('start-btn');
+    var button1 = document.getElementById('start-btn');
+    var button2 = document.getElementById('clear-btn');
 
-    input(form, area, button);
+    input(form, area, button1, button2);
 }
 
 window.onload = function() {
