@@ -28,10 +28,13 @@ function convert(text, lang1, lang2) {
         if (langSymbols[lang2].indexOf(text.charAt(1)) === -1) {
             fromLang = langSymbols.en;
             toLang = langSymbols[lang2];
+            console.log('en', lang2);
         } else {
             fromLang = langSymbols[lang2];
             toLang = langSymbols.en;
+            console.log(lang1, 'en');
         }
+        
     } else {
       fromLang = langSymbols[lang1];
       toLang = langSymbols[lang2];

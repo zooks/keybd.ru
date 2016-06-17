@@ -8,20 +8,65 @@ html(lang='ru')
       | Online Конвертирование текста, набранного в неправильной раскладке (RU-En, En-RU)
     meta(name='keywords', content='раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, ')
     meta(name='description', content='Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
     script(src='js/convert.js')
-    link(rel='stylesheet', href='css/convert.css')
     link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
     script(src="../bower_components/jquery/dist/jquery.min.js")
     script(src="../bower_components/tether/dist/js/tether.min.js")
     script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
     link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css")
     link(rel="stylesheet" href="../bower_components/jquery-bar-rating/dist/themes/fontawesome-stars.css")
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
+    //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
+    link(rel='stylesheet', href='css/convert.css')
   body
+    .navbar.navbar-light.bg-faded(role='navigation')
+      .container
+        // Collapsed navigation
+        .navbar-header
+          // Expander button
+          //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          a.navbar-brand(href='.') Typing.su
+          button.navbar-toggler.hidden-sm-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') &#9776;
+          #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+            // Main navigation
+            ul.nav.navbar-nav
+              li.nav-item.active
+                a.nav-link(href='/')
+                  | Раскладка
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='touch-typing/') Что дальше?
+              li.nav-item
+                a.nav-link(href='options/') Options
+              li.nav-item
+                a.nav-link(href='donate/') Спасибо
+            ul.nav.navbar-nav.pull-sm-right
+              li.nav-item
+                a.nav-link(href='https://github.com/')
+                  i.fa.fa-github
+                  |             GitHub
+                
+    .jumbotron.bs-docs-header
+      .container.text-center
+        h1 Исправление текста в неправильной раскладке
+        p.lead
+          | Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
+        a.btn.btn-outline-inverse.btn-lg(href='//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip', role='button')
+          i.fa.fa-download
+          |  Download (v1.10.0)
+        .carbonad
+          .carbonad-inner
+          .charity
+            | Ad revenue is donated to 
+            a(href='http://www.projetocana.org/', target='_blank', rel='nofollow') Projecto Cana
+            | .
+
     main.container
-      .row
-        .col-sm-12
-          h2.text-muted Исправление текста в неправильной раскладке
+      //- .row
+      //-   .col-sm-12
+      //-     h2.text-muted 
       .row
         .col-xs-4.col-sm-2.col-lg-1
           b Пример:
@@ -44,7 +89,7 @@ html(lang='ru')
             fieldset.form-group
               label(for='lang1') Исходный язык:
               select.c-select(id='lang1')
-                option(value='auto', selected) Авто
+                option.lang-sm.lang-lbl-full(value='auto', selected, lang='be') Авто
                 each val, index in lang
                   option(value=val)=langName[index]
           .col-sm-6
@@ -58,8 +103,9 @@ html(lang='ru')
                 //- option Латиница
               input#start-btn.btn.btn-info(type='button', value='Старт!')
         //- h3 Почему наш кодировщик лучше других аналогов?
+      .jumbotron
         .text-muted
-          b Особенности кодировщика:
+          h5 Особенности кодировщика:
           ul
             li
               | Введенные данные не отправляются на сервер, поэтому:
@@ -70,6 +116,12 @@ html(lang='ru')
               | Не нужно устанавливать на компьютер дополнительные программы,
               br
               |   просто добавьте страницу в закладки браузера
+      .well.panel-narrow
+        .row
+          .col-sm-4
+            each val, index in lang
+              p
+                span.lang-sm.lang-lbl-full(lang=val)
       //- // begin of Rambler's Top100 code
       //- a(href='http://top100.rambler.ru/top100/')
       //-   img(src='http://counter.rambler.ru/top100.cnt?568486', alt='', width='1', height='1', style='border:0')
@@ -85,5 +137,6 @@ html(lang='ru')
       //-   })(document, "script", document.location.protocol);
       //- // /Openstat
 
-      footer
-        p.text-muted © 2008–2016
+    footer.bd-footer
+      .container
+        p.text-muted.pull-xs-right © 2008–2016

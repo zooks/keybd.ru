@@ -5,23 +5,50 @@
     <title>Online Конвертирование текста, набранного в неправильной раскладке (RU-En, En-RU)</title>
     <meta name="keywords" content="раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, ">
     <meta name="description" content="Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/convert.js"></script>
-    <link rel="stylesheet" href="css/convert.css">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/tether/dist/js/tether.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="../bower_components/jquery-bar-rating/dist/themes/fontawesome-stars.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/convert.css">
   </head>
   <body>
-    <main class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2 class="text-muted">Исправление текста в неправильной раскладке</h2>
+    <div class="navbar navbar-light bg-faded" role="navigation">
+      <div class="container">
+        <!-- Collapsed navigation-->
+        <div class="navbar-header">
+          <!-- Expander button--><a class="navbar-brand" href=".">Typing.su</a>
+          <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">&#9776;</button>
+          <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+            <!-- Main navigation-->
+            <ul class="nav navbar-nav">
+              <li class="nav-item active"><a class="nav-link" href="/">Раскладка<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="touch-typing/">Что дальше?</a></li>
+              <li class="nav-item"><a class="nav-link" href="options/">Options</a></li>
+              <li class="nav-item"><a class="nav-link" href="donate/">Спасибо</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-sm-right">
+              <li class="nav-item"><a class="nav-link" href="https://github.com/"><i class="fa fa-github"></i>            GitHub</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="jumbotron bs-docs-header">
+      <div class="container text-center">
+        <h1>Исправление текста в неправильной раскладке</h1>
+        <p class="lead">Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.</p><a class="btn btn-outline-inverse btn-lg" href="//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip" role="button"><i class="fa fa-download"></i> Download (v1.10.0)</a>
+        <div class="carbonad">
+          <div class="carbonad-inner"></div>
+          <div class="charity">Ad revenue is donated to <a href="http://www.projetocana.org/" target="_blank" rel="nofollow">Projecto Cana</a>.</div>
+        </div>
+      </div>
+    </div>
+    <main class="container">
       <div class="row">
         <div class="col-xs-4 col-sm-2 col-lg-1"><b>Пример:</b></div>
         <div class="col-xs-8 col-sm-4 col-lg-3">Ghbdtn! ⇒ Привет!<br>Руддщ! ⇒ Hello!</div>
@@ -44,7 +71,7 @@
             <fieldset class="form-group">
               <label for="lang1">Исходный язык:</label>
               <select class="c-select" id="lang1">
-                <option value="auto" selected>Авто</option>
+                <option class="lang-sm lang-lbl-full" value="auto" selected lang="be">Авто</option>
                 <option value="ru">Русский</option>
                 <option value="en">Английский</option>
                 <option value="uk">Украинский</option>
@@ -87,7 +114,10 @@
             </fieldset>
           </div>
         </div>
-        <div class="text-muted"><b>Особенности кодировщика:</b>
+      </form>
+      <div class="jumbotron">
+        <div class="text-muted">
+          <h5>Особенности кодировщика:</h5>
           <ul>
             <li>Введенные данные не отправляются на сервер, поэтому:
               <ol>
@@ -98,10 +128,33 @@
             <li>Не нужно устанавливать на компьютер дополнительные программы,<br>  просто добавьте страницу в закладки браузера</li>
           </ul>
         </div>
-      </form>
-      <footer>
-        <p class="text-muted">© 2008–2016</p>
-      </footer>
+      </div>
+      <div class="well panel-narrow">
+        <div class="row">
+          <div class="col-sm-4">
+            <p><span class="lang-sm lang-lbl-full" lang="ru"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="en"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="uk"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="be"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="uz"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="kk"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="az"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="lt"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="mo"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="lv"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="ky"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="tg"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="hy"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="tk"></span></p>
+            <p><span class="lang-sm lang-lbl-full" lang="et"></span></p>
+          </div>
+        </div>
+      </div>
     </main>
+    <footer class="bd-footer">
+      <div class="container">
+        <p class="text-muted pull-xs-right">© 2008–2016</p>
+      </div>
+    </footer>
   </body>
 </html>

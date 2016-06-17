@@ -1,0 +1,168 @@
+- var lang = ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
+- var langName = ['Русский', 'Английский', 'Украинский', 'Белорусский', 'Узбекский', 'Казахский', 'Азербайджанский', 'Литовский', 'Молдавкий', 'Латышский', 'Киргизский', 'Таджикский', 'Армянский', 'Туркменский', 'Эстонский']
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    title
+      | Langs
+    //- link(rel='stylesheet', href='../bower_components/bootstrap-languages/languages.min.css')
+    //- link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+    //- script(src="../bower_components/jquery/dist/jquery.min.js")
+    //- script(src="../bower_components/tether/dist/js/tether.min.js")
+    //- script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css')
+    link(rel='stylesheet', href='../bower_components/bootstrap-languages/languages.min.css')
+    script(src='http://code.jquery.com/jquery.js')
+    script(src='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js')
+    link(rel='stylesheet', href='css/convert.css')
+  body
+    nav.navbar.navbar-default
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Brand
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#')
+                | Link 
+                span.sr-only (current)
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Dropdown 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider(role='separator')
+                li
+                  a(href='#') Separated link
+                li.divider(role='separator')
+                li
+                  a(href='#') One more separated link
+          form.navbar-form.navbar-left(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search')
+            button.btn.btn-default(type='submit') Submit
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Dropdown 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider(role='separator')
+                li
+                  a(href='#') Separated link
+        // /.navbar-collapse
+      // /.container-fluid
+
+    .row
+      .col-sm-6
+        fieldset.form-group
+          label(for='lang1') Исходный язык:
+          select.lang-list.c-select(id='lang1')
+            option.lang-sm.lang-lbl-full(value='auto', selected, lang='be') Авто
+            each val, index in lang
+              option(value=val, data-class='flag flag-'+val)=langName[index]
+    br
+    br
+    br
+    br
+    br
+    br
+    .well.panel-narrow
+      .row
+        .col-sm-4
+          each val, index in lang
+            p
+              span.lang-sm.lang-lbl-full(lang=val)
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    form.ajax_form.af_example(action='', method='post')
+      select#selectmenu(name='eventtype')
+        option(data-class="empty" disabled selected) Выберите тип торжества
+        option(data-class="ring") Свадьба
+        option(data-class="jubilee") Юбилей
+        option(data-class="corp") Корпоратив
+        option(data-class="other") Другое
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    .btn-group.dropup
+      button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+        span.lang-sm.lang-lbl-full(lang='it')
+        span.caret
+      ul.dropdown-menu(role='menu')
+        li
+          span.lang-sm.lang-lbl-full(lang='ar')
+        li
+          span.lang-sm.lang-lbl-full(lang='be')
+        li
+          span.lang-sm.lang-lbl-full(lang='bg')
+        li
+          span.lang-sm.lang-lbl-full(lang='cs')
+        li
+          span.lang-sm.lang-lbl-full(lang='da')
+        li
+          span.lang-sm.lang-lbl-full(lang='de')
+        li
+          span.lang-sm.lang-lbl-full(lang='el')
+        li
+          span.lang-sm.lang-lbl-full(lang='en')
+        li
+          span.lang-sm.lang-lbl-full(lang='es')
+        li
+          span.lang-sm.lang-lbl-full(lang='et')
+        li
+          span.lang-sm.lang-lbl-full(lang='fi')
+        li
+          span.lang-sm.lang-lbl-full(lang='fr')
+        li
+          span.lang-sm.lang-lbl-full(lang='ga')
+        li
+          span.lang-sm.lang-lbl-full(lang='hi')
+        li
+          span.lang-sm.lang-lbl-full(lang='hr')
+    | This is an exaple in the 
+    span.lang-sm.lang-lbl(lang='en')
+    |  language.
+
+    link(href="js/jquery/jquery-ui.css" rel="stylesheet")
+    script(src="js/jquery/jquery-ui.js")
+    link(rel='stylesheet', href='css/flags.css')
+    script(src="js/main.js")
