@@ -1,0 +1,164 @@
+- var lang = ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
+- var langName = ['Русский', 'English / Английский', 'Українська / Украинский', 'Беларуская / Белорусский', 'Ўзбекча / Узбекский', 'Қазақша / Казахский', 'Azərbaycanca / Азербайджанский', 'Lietuvių / Литовский', 'Moldovenească / Молдавский', 'Latviešu / Латышский', 'Кыргызча / Киргизский', 'Тоҷикӣ / Таджикский', 'Հայերեն / Армянский', 'Türkmen / Туркменский', 'Eesti / Эстонский']
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    title
+      | Online Конвертирование текста, набранного в неправильной раскладке (RU-EN, EN-RU, UK-EN, EN-UK, UK-RU)
+    meta(name='keywords', content='раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, ')
+    meta(name='description', content='Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='search', type='application/opensearchdescription+xml', href='/opensearch.xml', title='Конвертация раскладки')
+    script(src='js/convert.js')
+    //- link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css")
+    //- script(src="../bower_components/jquery/dist/jquery.min.js")
+    //- script(src="../bower_components/tether/dist/js/tether.min.js")
+    //- script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
+    link(rel='stylesheet', href='css/convert.css')
+  body
+    .navbar.navbar-light.bg-faded(role='navigation')
+      .container
+        // Collapsed navigation
+        .navbar-header
+          // Expander button
+          //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          a.navbar-brand(href='.') Typing.su
+          button.navbar-toggler.hidden-sm-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') &#9776;
+          #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+            // Main navigation
+            ul.nav.navbar-nav
+              li.nav-item.active
+                a.nav-link(href='/')
+                  | Раскладка
+                  span.sr-only (current)
+            //-   li.nav-item
+            //-     a.nav-link(href='touch-typing/') Что дальше?
+            //-   li.nav-item
+            //-     a.nav-link(href='options/') Options
+            //-   li.nav-item
+            //-     a.nav-link(href='donate/') Спасибо
+            //- ul.nav.navbar-nav.pull-sm-right
+            //-   li.nav-item
+            //-     a.nav-link(href='https://github.com/' rel='nofollow')
+            //-       i.fa.fa-github
+            //-       |  GitHub
+                
+    .jumbotron.bs-docs-header
+      .container.text-center
+        h1 Исправление текста в неправильной раскладке
+        p.lead
+          each val, index in lang
+            span(class="flag flag-"+val title=langName[index])
+            | 
+        //- p.lead
+        //-   | Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
+        //- a.btn.btn-outline-inverse.btn-lg(href='//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip', role='button')
+        //-   i.fa.fa-download
+        //-   |  Download (v1.10.0)
+        //- .carbonad
+        //-   .carbonad-inner
+        //-   .charity
+        //-     | Ad revenue is donated to 
+        //-     a(href='http://www.projetocana.org/', target='_blank', rel='nofollow') Projecto Cana
+        //-     | .
+
+    main.container
+      //- .row
+      //-   .col-sm-12
+      //-     h2.text-muted 
+      .row
+        .col-xs-4.col-sm-2.col-lg-1
+          b Пример:
+        .col-xs-8.col-sm-4.col-lg-3
+              | Ghbdtn! ⇒ Привет!
+              br
+              | Руддщ! ⇒ Hello!
+      br
+      form#convert-form.form-horizontal
+        .row
+          .col-sm-6
+            fieldset.form-group
+              textarea.form-control(name='coded', cols='50', rows='12') Вставьте сюда текст в неправильной раскладке и нажмите кнопку старт!
+          .col-sm-6
+            fieldset.form-group
+              textarea.form-control(name='decoded', cols='50', rows='12')
+              //- readonly
+        .row
+          .col-md-6
+            fieldset.form-group
+              //- label(for='lang1') Исходный язык:
+              select.c-select(id='lang1')
+                option.lang-sm.lang-lbl-full(value='auto', selected, lang='be') Авто
+                each val, index in lang
+                  option(value=val)=langName[index]
+          .col-md-6
+            fieldset.form-group
+              //- label(for='lang2') В какую раскладку сконвертировать:
+              select.c-select(id='lang2')
+                each val, index in lang
+                  option(value=val)=langName[index]
+                //- option Авто
+                //- option Кириллица
+                //- option Латиница
+            fieldset.form-group
+              input#start-btn.btn.btn-info(type='button', value='Старт!')
+              input#clear-btn.btn(type='button', value='Очистить')
+      br
+      .row
+        .col-sm-12
+          script(type='text/javascript', src='https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js', charset='utf-8')
+          script(type='text/javascript', src='https://yastatic.net/share2/share.js', charset='utf-8')
+          .ya-share2(data-services='vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj')
+      br
+        //- h3 Почему наш кодировщик лучше других аналогов?
+      .jumbotron
+        .text-muted
+          h5 Особенности кодировщика:
+          ul
+            li
+              | Введенные данные не отправляются на сервер, поэтому:
+              ol
+                li Исключена возможность прочтения вашего текста
+                li Мгновенное кодирование без расходования трафика.
+            li
+              | Не нужно устанавливать на компьютер дополнительные программы,
+              br
+              |   просто добавьте страницу в закладки браузера
+      .well.panel-narrow
+        .row
+          .col-sm-4
+            each val, index in lang
+              p
+                span.lang-sm.lang-lbl-full(lang=val)
+      //- // begin of Rambler's Top100 code
+      //- a(href='http://top100.rambler.ru/top100/')
+      //-   img(src='http://counter.rambler.ru/top100.cnt?568486', alt='', width='1', height='1', style='border:0')
+      //- // end of Top100 code
+      //- // Openstat
+      //- span#openstat2184317
+      //- script.
+      //-   var openstat = { counter: 2184317, next: openstat };
+      //-   (function(d, t, p) {
+      //-   var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+      //-   j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+      //-   var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+      //-   })(document, "script", document.location.protocol);
+      //- // /Openstat
+      // Yandex.Metrika counter
+      script(type='text/javascript').
+        (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38052870 = new Ya.Metrika({ id:38052870, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+      noscript
+        div
+          img(src='https://mc.yandex.ru/watch/38052870', style='position:absolute; left:-9999px;', alt='')
+      // /Yandex.Metrika counter
+
+
+    footer.bd-footer
+      .container
+        p.text-muted.pull-xs-right © 2008–2016

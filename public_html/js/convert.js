@@ -28,11 +28,11 @@ function convert(text, lang1, lang2) {
         if (langSymbols[lang2].indexOf(text.charAt(1)) === -1) {
             fromLang = langSymbols.en;
             toLang = langSymbols[lang2];
-            console.log('en', lang2);
+            // console.log('en', lang2);
         } else {
             fromLang = langSymbols[lang2];
             toLang = langSymbols.en;
-            console.log(lang1, 'en');
+            // console.log(lang2, 'en');
         }
         
     } else {
@@ -59,7 +59,7 @@ function clear(form) {
     form.coded.value = '';
 }
 
-function input(form, area, buttonStart, buttonClear) {
+function input(form, area, buttonStart, buttonClear, select1, select2) {
     area.addEventListener('input', function() {
         output(form);
     }, false);
@@ -71,15 +71,25 @@ function input(form, area, buttonStart, buttonClear) {
     buttonClear.addEventListener('click', function() {
         clear(form);
     }, false);
+
+    select1.addEventListener('change', function() {
+        output(form);
+    }, false);
+
+    select2.addEventListener('change', function() {
+        output(form);
+    }, false);
 }
 
 function onLoad() {
-    var form = document.getElementById('convert-form');//forms[0];
-    var area = form.coded;
-    var button1 = document.getElementById('start-btn');
-    var button2 = document.getElementById('clear-btn');
-
-    input(form, area, button1, button2);
+    var form = document.getElementById('convert-form'),
+    area = form.coded,
+    button1 = document.getElementById('start-btn'),
+    button2 = document.getElementById('clear-btn'),
+    select1 = document.getElementById('lang1'),
+    select2 = document.getElementById('lang2');
+    
+    input(form, area, button1, button2, select1, select2);
 }
 
 window.onload = function() {

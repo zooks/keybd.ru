@@ -1,5 +1,5 @@
 - var lang = ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
-- var langName = ['Русский', 'Английский', 'Украинский', 'Белорусский', 'Узбекский', 'Казахский', 'Азербайджанский', 'Литовский', 'Молдавкий', 'Латышский', 'Киргизский', 'Таджикский', 'Армянский', 'Туркменский', 'Эстонский']
+- var langName = ['Русский', 'English / Английский', 'Українська / Украинский', 'Беларуская / Белорусский', 'Ўзбекча / Узбекский', 'Қазақша / Казахский', 'Azərbaycanca / Азербайджанский', 'Lietuvių / Литовский', 'Moldovenească / Молдавский', 'Latviešu / Латышский', 'Кыргызча / Киргизский', 'Тоҷикӣ / Таджикский', 'Հայերեն / Армянский', 'Türkmen / Туркменский', 'Eesti / Эстонский']
 doctype html
 html(lang='ru')
   head
@@ -90,7 +90,12 @@ html(lang='ru')
               option(value=val, data-class='flag flag-'+val)=langName[index]
     br
     br
-    br
+    .jumbotron
+      each val, index in lang
+        span(class="flag flag-"+val title=langName[index])
+        | 
+        //- span= langName[index]
+
     br
     br
     br
@@ -164,5 +169,4 @@ html(lang='ru')
 
     link(href="js/jquery/jquery-ui.css" rel="stylesheet")
     script(src="js/jquery/jquery-ui.js")
-    link(rel='stylesheet', href='css/flags.css')
     script(src="js/main.js")

@@ -13,19 +13,9 @@
     "tests"
   ],
   "dependencies": {
-    "breakpoint-sass": "~2.5.0",
-    "compass-mixins": "~1.0.2",
-    "jquery": "~2.1.1",
-    "susy": "~2.2.2",
-    "jquery-colorbox": "~1.6.0",
-    "highcharts": "~4.1.5",
-    "jplayer": "~2.9.2",
-    "jquery.simplePagination": "*",
-    "normalize-css": "^4.1.1",
-    "tether": "^1.3.2",
-    "jquery-bar-rating": "^1.1.4",
-    "jquery.steps": "jquery-steps#^1.1.0",
+    "jquery": "~2.2.4",
     "bootstrap": "v4.0.0-alpha.2",
-    "bootstrap-languages": "bootstrap-language#*"
+    "bootstrap-languages": "bootstrap-language#*",
+    "flag-icon-css": "^2.3.1"
   }
 }

@@ -1,21 +1,22 @@
 .flag {
-    width: 32px;
-    height: 32px;
-    background:url(flags.png) no-repeat
+    width: 16px;
+    height: 16px;
+    background: url(flags.png) no-repeat;
+    display: inline-block;
 }
 
-.ui-icon .flag.flag-am {background-position: -32px 0}
-.ui-icon .flag.flag-az {background-position: -64px 0}
-.ui-icon .flag.flag-by {background-position: -96px 0}
-.ui-icon .flag.flag-et {background-position: 0 -32px}
-.ui-icon .flag.flag-en {background-position: -32px -32px}
-.ui-icon .flag.flag-kg {background-position: -64px -32px}
-.ui-icon .flag.flag-kz {background-position: -96px -32px}
-.ui-icon .flag.flag-lt {background-position: 0 -64px}
-.ui-icon .flag.flag-lv {background-position: -32px -64px}
-.ui-icon .flag.flag-mo {background-position: -64px -64px}
-.ui-icon .flag.flag-ru {background-position: -96px -64px}
-.ui-icon .flag.flag-tj {background-position: 0 -96px}
-.ui-icon .flag.flag-tm {background-position: -32px -96px}
-.ui-icon .flag.flag-ua {background-position: -64px -96px}
-.ui-icon .flag.flag-uz {background-position: -96px -96px}
+.flag.flag-am {background-position: -32px 0}
+.flag.flag-az {background-position: -64px 0}
+.flag.flag-by {background-position: -96px 0}
+.flag.flag-et {background-position: 0 -32px}
+.flag.flag-en {background-position: -32px -32px}
+.flag.flag-kg {background-position: -64px -32px}
+.flag.flag-kz {background-position: -96px -32px}
+.flag.flag-lt {background-position: 0 -64px}
+.flag.flag-lv {background-position: -32px -64px}
+.flag.flag-mo {background-position: -64px -64px}
+.flag.flag-ru {background-position: -96px -64px}
+.flag.flag-tj {background-position: 0 -96px}
+.flag.flag-tm {background-position: -32px -96px}
+.flag.flag-ua {background-position: -64px -96px}
+.flag.flag-uz {background-position: -96px -96px}
