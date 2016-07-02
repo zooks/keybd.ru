@@ -5,14 +5,15 @@
     <title>Online Конвертирование русской раскладки в английскую (16 языков: RU-EN, EN-RU, UK-EN, EN-UK, UK-RU)</title>
     <meta name="keywords" content="раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, Punto Switcher онлайн">
     <meta name="description" content="Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.">
+    <script src="js/convert.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Конвертация раскладки">
-    <script src="js/convert.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/convert.css">
   </head>
   <body>
@@ -53,7 +54,7 @@
           </div>
           <div class="col-sm-6">
             <fieldset class="form-group">
-              <textarea class="form-control" name="decoded" cols="50" rows="12"></textarea>
+              <textarea class="form-control" id="decoded" name="decoded" cols="50" rows="12"></textarea>
             </fieldset>
           </div>
         </div>
@@ -102,6 +103,7 @@
             </fieldset>
             <fieldset class="form-group">
               <input class="btn btn-info" id="start-btn" type="button" value="Старт!">
+              <input class="btn" id="copy-btn" type="button" value="Копировать" data-clipboard-target="#decoded">
               <input class="btn" id="clear-btn" type="button" value="Очистить">
             </fieldset>
           </div>
@@ -160,6 +162,11 @@
         </noscript>
         <!-- /Yandex.Metrika counter-->
       </div>
+      <script>
+        (function(){
+          new Clipboard('#copy-btn');
+        })();
+      </script>
     </footer>
   </body>
 </html>

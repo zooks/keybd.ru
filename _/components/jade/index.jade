@@ -1,6 +1,12 @@
 extends ./layout.jade
 
-
+block head
+  title
+    | Online Конвертирование русской раскладки в английскую (16 языков: RU-EN, EN-RU, UK-EN, EN-UK, UK-RU)
+  meta(name='keywords', content='раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, Punto Switcher онлайн')
+  meta(name='description', content='Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.')
+  script(src='js/convert.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js")
 
                 
 block header
@@ -40,7 +46,7 @@ block content
           textarea.form-control(name='coded', cols='50', rows='12') Вставьте сюда текст в неправильной раскладке и нажмите кнопку старт!
       .col-sm-6
         fieldset.form-group
-          textarea.form-control(name='decoded', cols='50', rows='12')
+          textarea#decoded.form-control(name='decoded', cols='50', rows='12')
           //- readonly
     .row
       .col-md-6
@@ -61,6 +67,7 @@ block content
             //- option Латиница
         fieldset.form-group
           input#start-btn.btn.btn-info(type='button', value='Старт!')
+          input#copy-btn.btn(type='button', value='Копировать', data-clipboard-target='#decoded')
           input#clear-btn.btn(type='button', value='Очистить')
   br
   .row
@@ -89,3 +96,8 @@ block content
         each val, index in lang
           p
             span.lang-sm.lang-lbl-full(lang=val)
+block scripts
+  script.
+    (function(){
+      new Clipboard('#copy-btn');
+    })();

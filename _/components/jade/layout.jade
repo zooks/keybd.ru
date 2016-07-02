@@ -4,23 +4,18 @@ doctype html
 html(lang='ru')
   head
     meta(charset='UTF-8')
-    block description
-      title
-        | Online Конвертирование русской раскладки в английскую (16 языков: RU-EN, EN-RU, UK-EN, EN-UK, UK-RU)
-      meta(name='keywords', content='раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, Punto Switcher онлайн')
-      meta(name='description', content='Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.')
+    block head
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='search', type='application/opensearchdescription+xml', href='/opensearch.xml', title='Конвертация раскладки')
-    script(src='js/convert.js')
     //- link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css")
     //- script(src="../bower_components/jquery/dist/jquery.min.js")
     //- script(src="../bower_components/tether/dist/js/tether.min.js")
     //- script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
-    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css")
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
     link(rel='stylesheet', href='css/convert.css')
   body
     .navbar.navbar-light.bg-faded(role='navigation')
@@ -32,6 +27,7 @@ html(lang='ru')
           a.navbar-brand(href='.') Typing.su
           button.navbar-toggler.hidden-sm-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') &#9776;
           #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+            //- ≡☰
             // Main navigation
             ul.nav.navbar-nav
               li.nav-item.active
@@ -100,3 +96,4 @@ html(lang='ru')
           div
             img(src='https://mc.yandex.ru/watch/38052870', style='position:absolute; left:-9999px;', alt='')
         // /Yandex.Metrika counter
+      block scripts
