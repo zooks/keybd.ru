@@ -1,0 +1,102 @@
+- var lang = ['ru', 'en', 'uk', 'be', 'uz', 'kk', 'az', 'lt', 'mo', 'lv', 'ky', 'tg', 'hy', 'tk', 'et']
+- var langName = ['Русский', 'English (Английский)', 'Українська (Украинский)', 'Беларуская (Белорусский)', 'Ўзбекча (Узбекский)', 'Қазақша (Казахский)', 'Azərbaycanca (Азербайджанский)', 'Lietuvių (Литовский)', 'Moldovenească (Молдавский)', 'Latviešu (Латышский)', 'Кыргызча (Киргизский)', 'Тоҷикӣ (Таджикский)', 'Հայերեն (Армянский)', 'Türkmen (Туркменский)', 'Eesti (Эстонский)']
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    block description
+      title
+        | Online Конвертирование русской раскладки в английскую (16 языков: RU-EN, EN-RU, UK-EN, EN-UK, UK-RU)
+      meta(name='keywords', content='раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, Punto Switcher онлайн')
+      meta(name='description', content='Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='search', type='application/opensearchdescription+xml', href='/opensearch.xml', title='Конвертация раскладки')
+    script(src='js/convert.js')
+    //- link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css")
+    //- script(src="../bower_components/jquery/dist/jquery.min.js")
+    //- script(src="../bower_components/tether/dist/js/tether.min.js")
+    //- script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
+    link(rel='stylesheet', href='css/convert.css')
+  body
+    .navbar.navbar-light.bg-faded(role='navigation')
+      .container
+        // Collapsed navigation
+        .navbar-header
+          // Expander button
+          //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          a.navbar-brand(href='.') Typing.su
+          button.navbar-toggler.hidden-sm-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') &#9776;
+          #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+            // Main navigation
+            ul.nav.navbar-nav
+              li.nav-item.active
+                a.nav-link(href='/')
+                  | Раскладка
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='emoji.html') Эмоджи
+            //-   li.nav-item
+            //-     a.nav-link(href='touch-typing/') Что дальше?
+            //-   li.nav-item
+            //-     a.nav-link(href='options/') Options
+            //-   li.nav-item
+            //-     a.nav-link(href='donate/') Спасибо
+            //- ul.nav.navbar-nav.pull-sm-right
+            //-   li.nav-item
+            //-     a.nav-link(href='https://github.com/' rel='nofollow')
+            //-       i.fa.fa-github
+            //-       |  GitHub
+                
+    .jumbotron.bs-docs-header
+      .container.text-center
+        block header
+          h1 Исправление текста в неправильной раскладке
+          p.lead
+            each val, index in lang
+              span(class="flag flag-"+val title=langName[index])
+              | 
+          //- p.lead
+          //-   | Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
+          //- a.btn.btn-outline-inverse.btn-lg(href='//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip', role='button')
+          //-   i.fa.fa-download
+          //-   |  Download (v1.10.0)
+          //- .carbonad
+          //-   .carbonad-inner
+          //-   .charity
+          //-     | Ad revenue is donated to 
+          //-     a(href='http://www.projetocana.org/', target='_blank', rel='nofollow') Projecto Cana
+          //-     | .
+
+    main.container
+      block content
+
+    footer.bd-footer
+      .container
+        p.text-muted.pull-xs-right © 2008–2016
+
+        //- // begin of Rambler's Top100 code
+        //- a(href='http://top100.rambler.ru/top100/')
+        //-   img(src='http://counter.rambler.ru/top100.cnt?568486', alt='', width='1', height='1', style='border:0')
+        //- // end of Top100 code
+        //- // Openstat
+        //- span#openstat2184317
+        //- script.
+        //-   var openstat = { counter: 2184317, next: openstat };
+        //-   (function(d, t, p) {
+        //-   var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+        //-   j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+        //-   var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+        //-   })(document, "script", document.location.protocol);
+        //- // /Openstat
+        // Yandex.Metrika counter
+        script(type='text/javascript').
+          (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38052870 = new Ya.Metrika({ id:38052870, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+        noscript
+          div
+            img(src='https://mc.yandex.ru/watch/38052870', style='position:absolute; left:-9999px;', alt='')
+        // /Yandex.Metrika counter

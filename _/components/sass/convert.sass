@@ -4,6 +4,12 @@
 
 
 @media (max-width: 34em)
+  h1
+    font-size: 1.75rem
+  h2
+    font-size: 1.5rem
+  h3, h4, h5
+    font-size: 1.25rem
   .navbar-nav
     clear: both
     margin-left: 0
@@ -15,6 +21,8 @@
       margin-left: 0
   .navbar-toggleable-xs
     clear: both
+  .bs-docs-header
+    background-position: 0 -100px !important
 
   textarea
     height: 100px
@@ -25,9 +33,11 @@
 .bs-docs-header
   background: #adb0b7 url(img/keyboard-829330_1920.jpg) no-repeat
   // background-size: cover
-  h1
+  h1, p
     color: white
     text-shadow: 1px 1px 2px black
+  p
+    display: none
 .bd-footer
   padding: 4rem 0
   margin-top: 4rem
@@ -117,3 +127,14 @@
     background-position: -32px -48px
   &.flag-uz
     background-position: -48px -48px
+
+.emoji
+  p
+    font-family: Segoe UI Emoji
+    font-size: 2.5rem
+  h2.text-muted
+    display: none
+  section
+    padding: 1rem 0
+span.emoji
+  font-family: Segoe UI Emoji
