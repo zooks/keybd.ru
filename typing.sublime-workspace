@@ -53,7 +53,7 @@
 			],
 			[
 				"c",
-				"class	Attr"
+				"class\tAttr"
 			],
 			[
 				"max",
@@ -129,7 +129,7 @@
 			],
 			[
 				"lh",
-				"lh	line-height"
+				"lh\tline-height"
 			],
 			[
 				"ar",
@@ -149,7 +149,7 @@
 			],
 			[
 				"h",
-				"height	Attr"
+				"height\tAttr"
 			],
 			[
 				"no",
@@ -193,7 +193,7 @@
 			],
 			[
 				"f-s",
-				"fs-i	font-style: italic;"
+				"fs-i\tfont-style: italic;"
 			],
 			[
 				"li",
@@ -257,7 +257,7 @@
 			],
 			[
 				"a",
-				"article	Tag"
+				"article\tTag"
 			],
 			[
 				"__",
@@ -317,11 +317,11 @@
 			],
 			[
 				"re",
-				"rel	Attr"
+				"rel\tAttr"
 			],
 			[
 				"b",
-				"big	Tag"
+				"big\tTag"
 			],
 			[
 				"F",
@@ -329,21 +329,55 @@
 			],
 			[
 				"s",
-				"style	Attr"
+				"style\tAttr"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "Package Control Messages\n========================\n\nBracketHighlighter\n------------------\n\n  # BracketHighlighter 2.20.0\n  \n  ## New\n  \n  - BracketHighlighter will (hopefully) update dependencies to latest versions on upgrade.  This can be disabled if desired in the settings.\n  - Popup hints are now enabled by default and are no longer considered experimental.  Must have ST 3116+ to use.\n  - Popup hints now calculate emphasis from style settings by default.  To use/re-enable custom emphasis, use the setting `use_custom_popup_bracket_emphasis`.\n",
+			"file": "_/components/sass/convert.sass",
 			"settings":
 			{
-				"buffer_size": 549,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
+				"buffer_size": 2995,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 2732,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_/components/jade/emoji.jade",
+			"settings":
+			{
+				"buffer_size": 6440,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_/components/jade/layout.jade",
+			"settings":
+			{
+				"buffer_size": 5808,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_/components/jade/index.jade",
+			"settings":
+			{
+				"buffer_size": 3926,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -374,8 +408,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "syntax py",
+		"height": 127.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -543,7 +577,7 @@
 				"Set Syntax: CSS"
 			],
 			[
-				"synta	h",
+				"synta\th",
 				"Set Syntax: HTML"
 			],
 			[
@@ -744,10 +778,12 @@
 		"/D/OpenServer/domains/typing.local/_/components/js",
 		"/D/OpenServer/domains/typing.local/_/components/sass",
 		"/D/OpenServer/domains/typing.local/public_html",
+		"/D/OpenServer/domains/typing.local/public_html/css",
 		"/D/OpenServer/domains/typing.local/public_html/js"
 	],
 	"file_history":
 	[
+		"/D/OpenServer/domains/sovtime.local/gulpfile.js",
 		"/D/WEBDEV/PHP/mail.php",
 		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/perfomance.php",
 		"/D/WEBDEV/Vesta/autoreply-exim4.conf.template.php",
@@ -874,12 +910,11 @@
 		"/D/Projects/fasadof/modx/last-modified.php",
 		"/D/Projects/скрутим.рф/xn--h1adhodig.xn--p1ai/admin/includes/config.inc.php",
 		"/D/Projects/скрутим.рф/logs/lastlog",
-		"/D/Projects/скрутим.рф/lastlog",
-		"/C/Users/Jeka/Desktop/Kathleen on Behance.htm"
+		"/D/Projects/скрутим.рф/lastlog"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -899,6 +934,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"display",
 			":$h_subject:}",
 			":$h_Subject:}",
 			"\\",
@@ -1025,8 +1061,7 @@
 			"\\",
 			"xn--h1adhodig.xn--p1ai",
 			"rel=\"canonical\"",
-			"canonical",
-			"%2F"
+			"canonical"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1104,7 +1139,7 @@
 			"    ",
 			"</td>",
 			"<td>",
-			"	0",
+			"\t0",
 			" 0",
 			"0",
 			" #",
@@ -1144,36 +1179,584 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "_/components/sass/convert.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 549,
+						"buffer_size": 2995,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								549,
-								549
+								768,
+								768
 							]
 						],
 						"settings":
 						{
-							"auto_indent": false,
 							"bracket_highlighter.busy": false,
-							"default_dir": "D:\\OpenServer\\domains\\typing.local\\_",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 377.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1105,
+								1105
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1104,
+										1105
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1004,
+										1005
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Theme - Afterglow/Prefs/Langs/Gulpfile JS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_/components/jade/emoji.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										327,
+										328
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										320,
+										321
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_/components/jade/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5808,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2383,
+								2383
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2382,
+										2383
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2365,
+										2366
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_/components/jade/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3926,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1832,
+								1832
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1831,
+										1832
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1712,
+										1713
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 710.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1272,12 +1855,12 @@
 		"selected_items":
 		[
 			[
-				"ars",
-				"D:\\Projects\\arsp.info\\arsp.info.sublime-project"
+				"",
+				"D:\\OpenServer\\domains\\sovtime.local\\sovtime.sublime-project"
 			],
 			[
-				"",
-				"D:\\OpenServer\\domains\\es-foto.local\\es-foto.sublime-workspace"
+				"ars",
+				"D:\\Projects\\arsp.info\\arsp.info.sublime-project"
 			]
 		],
 		"width": 380.0
