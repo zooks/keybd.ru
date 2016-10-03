@@ -336,43 +336,14 @@
 	"buffers":
 	[
 		{
-			"file": "_/components/jade/index.jade",
+			"contents": "Package Control Messages\n========================\n\nBracketHighlighter\n------------------\n\n  # BracketHighlighter 2.20.0\n  \n  ## New\n  \n  - BracketHighlighter will (hopefully) update dependencies to latest versions on upgrade.  This can be disabled if desired in the settings.\n  - Popup hints are now enabled by default and are no longer considered experimental.  Must have ST 3116+ to use.\n  - Popup hints now calculate emphasis from style settings by default.  To use/re-enable custom emphasis, use the setting `use_custom_popup_bracket_emphasis`.\n",
 			"settings":
 			{
-				"buffer_size": 3123,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "_/components/jade/emoji.jade",
-			"settings":
-			{
-				"buffer_size": 6408,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/OpenServer/domains/es-foto.local/_/components/jade/form.jade",
-			"settings":
-			{
-				"buffer_size": 8963,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "_/components/jade/layout.jade",
-			"settings":
-			{
-				"buffer_size": 6053,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "_/components/sass/convert.sass",
-			"settings":
-			{
-				"buffer_size": 2942,
-				"line_ending": "Windows"
+				"buffer_size": 549,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
@@ -403,10 +374,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "html",
+		"height": 104.0,
+		"last_filter": "syntax py",
 		"selected_items":
 		[
+			[
+				"syntax py",
+				"Set Syntax: Python"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
 			[
 				"html",
 				"Set Syntax: HTML"
@@ -462,10 +441,6 @@
 			[
 				"sass",
 				"Set Syntax: Sass"
-			],
-			[
-				"php",
-				"Set Syntax: PHP"
 			],
 			[
 				"instal",
@@ -620,10 +595,6 @@
 				"Package Control: Disable Package"
 			],
 			[
-				"syntax py",
-				"Set Syntax: Python"
-			],
-			[
 				"syntax html",
 				"Set Syntax: HTML"
 			],
@@ -770,23 +741,35 @@
 		"/D/OpenServer/domains/typing.local/_",
 		"/D/OpenServer/domains/typing.local/_/components",
 		"/D/OpenServer/domains/typing.local/_/components/jade",
+		"/D/OpenServer/domains/typing.local/_/components/js",
 		"/D/OpenServer/domains/typing.local/_/components/sass",
-		"/D/OpenServer/domains/typing.local/public_html"
+		"/D/OpenServer/domains/typing.local/public_html",
+		"/D/OpenServer/domains/typing.local/public_html/js"
 	],
 	"file_history":
 	[
+		"/D/WEBDEV/PHP/mail.php",
+		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/perfomance.php",
+		"/D/WEBDEV/Vesta/autoreply-exim4.conf.template.php",
+		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/contacts.php",
+		"/D/OpenServer/domains/typing.local/_/components/sass/convert.sass",
+		"/D/OpenServer/domains/typing.local/_/components/jade/emoji.jade",
+		"/D/OpenServer/domains/typing.local/_/components/jade/index.jade",
+		"/D/OpenServer/domains/typing.local/_/components/jade/layout.jade",
+		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/partners.php",
+		"/E/100/My work/Festivales/V omut s golovoy/Site/partners/page/partners.html",
+		"/E/100/My work/Companies/OMD/Renault/100_(980)x250_renault_kaptur_reveal_rbc_Canvas.html",
+		"/D/OpenServer/domains/typing.local/public_html/test-copy.html",
+		"/D/OpenServer/domains/es-foto.local/_/components/jade/form.jade",
 		"/D/OpenServer/domains/yubiley.local/_/components/jade/contact.jade",
 		"/D/OpenServer/domains/yubiley.local/_/components/jade/menu.jade",
 		"/D/OpenServer/domains/yubiley.local/_/components/jade/index.jade",
 		"/D/OpenServer/domains/yubiley.local/_/components/jade/layout.jade",
 		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/templates/2012/css/style.css",
-		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/perfomance.php",
 		"/E/100/My work/Festivales/V omut s golovoy/Site/omutfest.ru_25.06.16_backup/docs/index.php",
 		"/D/OpenServer/domains/tabulasense.local/custom.js",
 		"/D/OpenServer/domains/tabulasense.local/public_html/wp-content/themes/smartmvp/404.php",
 		"/D/OpenServer/domains/tabulasense.local/custom-old.js",
-		"/D/OpenServer/domains/typing.local/_/components/jade/index.jade",
-		"/D/OpenServer/domains/typing.local/_/components/sass/convert.sass",
 		"/D/OpenServer/domains/typing.local/bower_components/bootstrap/scss/_variables.scss",
 		"/D/OpenServer/domains/typing.local/bower_components/bootstrap/scss/_type.scss",
 		"/D/OpenServer/domains/typing.local/public_html/js/convert.js",
@@ -892,17 +875,7 @@
 		"/D/Projects/скрутим.рф/xn--h1adhodig.xn--p1ai/admin/includes/config.inc.php",
 		"/D/Projects/скрутим.рф/logs/lastlog",
 		"/D/Projects/скрутим.рф/lastlog",
-		"/C/Users/Jeka/Desktop/Kathleen on Behance.htm",
-		"/D/Projects/proshtamp.ru/public_html/config.inc.php",
-		"/D/Projects/proshtamp.ru/public_html/mail.php",
-		"/P/sovtime/bak/13.08.2015/nginx.conf",
-		"/D/Projects/proshtamp.ru/public_html/.htaccess",
-		"/P/sovtime/bak/13.08.2015/.htaccess",
-		"/P/sovtime/bak/2016-01-10/conf/nginx.conf",
-		"/D/OpenServer/domains/localhost/.htaccess",
-		"/D/OpenServer/domains/localhost/index.php",
-		"/R/R/ussr/rulers/lenin/bio/index.html",
-		"/R/R/ussr/kpss/charts/example.html"
+		"/C/Users/Jeka/Desktop/Kathleen on Behance.htm"
 	],
 	"find":
 	{
@@ -926,6 +899,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			":$h_subject:}",
+			":$h_Subject:}",
+			"\\",
+			"images/",
+			"navbar-toggler",
+			".js",
+			"cdn",
+			"decoded",
 			" + ",
 			"bg-info",
 			".tab-pane",
@@ -1045,15 +1026,7 @@
 			"xn--h1adhodig.xn--p1ai",
 			"rel=\"canonical\"",
 			"canonical",
-			"%2F",
-			"max_1200",
-			"%2F",
-			"(bootloader) ",
-			"local",
-			"/home/da163/domains/proshtamp.ru/public_html",
-			"da163_proshtamp",
-			"J6XPSZZZ45Uaz9Zx",
-			"http://sovietera.net"
+			"%2F"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1171,513 +1144,33 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_/components/jade/index.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3123,
+						"buffer_size": 549,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2558,
-								2569
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_/components/jade/emoji.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6408,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								343,
-								347
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"open_with_edit": true,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/OpenServer/domains/es-foto.local/_/components/jade/form.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8963,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1148,
-								1117
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-									"1":
-									[
-										3090,
-										3091
-									]
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_/components/jade/layout.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6053,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1052,
+								549,
 								549
 							]
 						],
 						"settings":
 						{
+							"auto_indent": false,
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"open_with_edit": true,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "_/components/sass/convert.sass",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2942,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								715,
-								715
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"default_dir": "D:\\OpenServer\\domains\\typing.local\\_",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1775,7 +1268,7 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ars",
+		"last_filter": "",
 		"selected_items":
 		[
 			[

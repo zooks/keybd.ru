@@ -18,6 +18,10 @@ html(lang='ru')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
     link(rel='stylesheet', href='css/convert.css')
   body
+    block link
+      -var selected = 'Раскладка'; //default
+    -var menu = { 'Раскладка': '/', 'Эмоджи': 'emoji.html' };
+
     .navbar.navbar-light.bg-faded(role='navigation')
       .container
         // Collapsed navigation
@@ -29,12 +33,15 @@ html(lang='ru')
           #exCollapsingNavbar2.collapse.navbar-toggleable-xs
             // Main navigation
             ul.nav.navbar-nav
-              li.nav-item.active
-                a.nav-link(href='/')
-                  | Раскладка
-                  span.sr-only (current)
-              li.nav-item
-                a.nav-link(href='emoji.html') Эмоджи
+              each val, key in menu
+                if (selected === key)
+                  li.nav-item.active
+                    a.nav-link(href=val)
+                      = key
+                      span.sr-only (current)
+                else
+                  li.nav-item
+                    a.nav-link(href=val)= key
             //-   li.nav-item
             //-     a.nav-link(href='touch-typing/') Что дальше?
             //-   li.nav-item
