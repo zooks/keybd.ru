@@ -1,24 +1,19 @@
 'use strict';
 
 var gulp = require('gulp'),
-        // sass = require('node-sass'),
         sass = require('gulp-sass'),
-        jade = require('gulp-pug'),
-        coffee = require('gulp-coffee'),
+        pug = require('gulp-pug'),
         autoprefixer = require('gulp-autoprefixer'),
         minifycss = require('gulp-minify-css'),
         sourcemaps = require('gulp-sourcemaps'),
         // rename = require('gulp-rename'),
         concat = require('gulp-concat'),
-        // compass = require('gulp-compass'),
         jshint = require('gulp-jshint'),
         uglify = require('gulp-uglify'),
         refresh = require('gulp-refresh'),
         plumber = require('gulp-plumber'),
         duration = require('gulp-duration');
 
-
-// by Fesor
 function handleError(err) {
   console.log(err.toString());
   this.emit('end');
@@ -53,17 +48,10 @@ gulp.task('scripts', function() {
     .pipe(refresh());
 });
 
-// CoffeeScript
-gulp.task('coffee', function() {
-  gulp.src('_/components/coffee/*.coffee')
-    .pipe(coffee({bare: true}).on('error', handleError))
-    .pipe(gulp.dest('public_html/js'));
-});
-
-// Jade
-gulp.task('jade', function() {
-  return gulp.src('_/components/jade/**/*.jade')
-    .pipe(jade({
+// Pug (Jade)
+gulp.task('pug', function() {
+  return gulp.src('_/components/pug/**/*.pug')
+    .pipe(pug({
       pretty: true
     }).on('error', handleError))
     .pipe(gulp.dest('public_html/'))
@@ -74,12 +62,9 @@ gulp.task('watch', function() {
   refresh.listen();
   gulp.watch('_/components/sass/*.sass', ['styles']);//styles
   gulp.watch('_/components/js/*.js', ['scripts']);//scripts
-  gulp.watch('_/components/coffee/*.coffee', ['coffee']);//coffee
-  gulp.watch('_/components/jade/**/*.jade',['jade']);//html
-  // gulp.watch('*.html', notifyLiveReload);
-  // gulp.watch('public_html/css/*.css', notifyLiveReload);
+  gulp.watch('_/components/pug/**/*.pug',['pug']);//html
 });
 
-gulp.task('default', ['styles', 'scripts', 'coffee', 'jade', 'watch'], function() {
+gulp.task('default', ['styles', 'scripts', 'pug', 'watch'], function() {
 
 });

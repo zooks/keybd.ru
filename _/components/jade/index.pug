@@ -1,4 +1,4 @@
-extends ./layout.jade
+extends ./_layout.pug
 
 block head
   title
@@ -14,18 +14,6 @@ block header
   p.lead
     each val, index in lang
       span(class="flag flag-"+val title=langName[index])
-      | 
-  //- p.lead
-  //-   | Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
-  //- a.btn.btn-outline-inverse.btn-lg(href='//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip', role='button')
-  //-   i.fa.fa-download
-  //-   |  Download (v1.10.0)
-  //- .carbonad
-  //-   .carbonad-inner
-  //-   .charity
-  //-     | Ad revenue is donated to 
-  //-     a(href='http://www.projetocana.org/', target='_blank', rel='nofollow') Projecto Cana
-  //-     | .
 
 block content
   //- .row
