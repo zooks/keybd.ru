@@ -11,7 +11,7 @@ var gulp = require('gulp'),
         jshint = require('gulp-jshint'),
         uglify = require('gulp-uglify'),
         refresh = require('gulp-refresh'),
-        plumber = require('gulp-plumber'),
+        // plumber = require('gulp-plumber'),
         duration = require('gulp-duration');
 
 function handleError(err) {
@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
 
 // Pug (Jade)
 gulp.task('pug', function() {
-  return gulp.src('_/components/pug/**/*.pug')
+  return gulp.src('_/components/pug/**/!(_)*.pug')
     .pipe(pug({
       pretty: true
     }).on('error', handleError))

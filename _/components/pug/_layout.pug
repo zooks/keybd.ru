@@ -61,18 +61,6 @@ html(lang='ru')
           p.lead
             each val, index in lang
               span(class="flag flag-"+val title=langName[index])
-              | 
-          //- p.lead
-          //-   | Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
-          //- a.btn.btn-outline-inverse.btn-lg(href='//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip', role='button')
-          //-   i.fa.fa-download
-          //-   |  Download (v1.10.0)
-          //- .carbonad
-          //-   .carbonad-inner
-          //-   .charity
-          //-     | Ad revenue is donated to 
-          //-     a(href='http://www.projetocana.org/', target='_blank', rel='nofollow') Projecto Cana
-          //-     | .
 
     main.container
       block content
@@ -81,20 +69,6 @@ html(lang='ru')
       .container
         p.text-muted.pull-xs-right © 2008–2016
 
-        //- // begin of Rambler's Top100 code
-        //- a(href='http://top100.rambler.ru/top100/')
-        //-   img(src='http://counter.rambler.ru/top100.cnt?568486', alt='', width='1', height='1', style='border:0')
-        //- // end of Top100 code
-        //- // Openstat
-        //- span#openstat2184317
-        //- script.
-        //-   var openstat = { counter: 2184317, next: openstat };
-        //-   (function(d, t, p) {
-        //-   var j = d.createElement(t); j.async = true; j.type = "text/javascript";
-        //-   j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
-        //-   var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
-        //-   })(document, "script", document.location.protocol);
-        //- // /Openstat
         // Yandex.Metrika counter
         script(type='text/javascript').
           (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38052870 = new Ya.Metrika({ id:38052870, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
