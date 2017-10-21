@@ -8,19 +8,14 @@ html(lang='ru')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='search', type='application/opensearchdescription+xml', href='/opensearch.xml', title='Конвертация раскладки')
-    //- link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css")
-    //- script(src="../bower_components/jquery/dist/jquery.min.js")
-    //- script(src="../bower_components/tether/dist/js/tether.min.js")
-    //- script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css")
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
     link(rel='stylesheet', href='css/convert.css')
   body
     block link
       -var selected = 'Раскладка'; //default
     -var menu = { 'Раскладка': '/', 'Эмоджи': 'emoji.html' };
+    //- { 'Что дальше?': 'touch-typing/', 'Спасибо': 'donate/' };
 
     .navbar.navbar-light.bg-faded(role='navigation')
       .container
@@ -29,7 +24,7 @@ html(lang='ru')
           // Expander button
           //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
           a.navbar-brand(href='.') Typing.su
-          button.navbar-toggler.hidden-sm-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') ≡
+          button.navbar-toggler.hidden-sm-up.float-sm-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') ≡
           #exCollapsingNavbar2.collapse.navbar-toggleable-xs
             // Main navigation
             ul.nav.navbar-nav
@@ -48,14 +43,14 @@ html(lang='ru')
             //-     a.nav-link(href='options/') Options
             //-   li.nav-item
             //-     a.nav-link(href='donate/') Спасибо
-            //- ul.nav.navbar-nav.pull-sm-right
+            //- ul.nav.navbar-nav.float-sm-right
             //-   li.nav-item
             //-     a.nav-link(href='https://github.com/' rel='nofollow')
             //-       i.fa.fa-github
             //-       |  GitHub
-                
+
     .jumbotron.bs-docs-header
-      .container.text-center
+      .container
         block header
           h1 Исправление текста в неправильной раскладке
           p.lead
@@ -67,13 +62,11 @@ html(lang='ru')
 
     footer.bd-footer
       .container
-        p.text-muted.pull-xs-right © 2008–2016
+        p.text-muted.float-sm-right © 2008–2016
 
-        // Yandex.Metrika counter
-        script(type='text/javascript').
-          (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38052870 = new Ya.Metrika({ id:38052870, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
-        noscript
-          div
-            img(src='https://mc.yandex.ru/watch/38052870', style='position:absolute; left:-9999px;', alt='')
-        // /Yandex.Metrika counter
-      block scripts
+        include partials/counters.html
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js')
+    block scripts

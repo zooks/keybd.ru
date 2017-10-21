@@ -5,24 +5,14 @@ block head
     | Онлайн эмоджи для набора с компьютера
   meta(name='keywords', content='эмодзи, эмоджи, смайлы эмодзи, смайлики эмодзи, эмодзи клавиатура, флаги эмодзи')
   meta(name='description', content='Набрать смайлы эмодзи на компьютере. Коды не нужны!')
+
 block link
   -var selected = 'Эмоджи';
 
 block header
   h1 Эмоджи/эмодзи (Emoji)
   p.lead Emoji — это цветные пиктограммы, которые используются в тексте.
-  //- p Они изображают лица, погоду, транспорт, здания, еду и напитки, животных и растения, или иконки, передающие эмоции, чувства.
-  //- p.lead
-  //-   | Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
-  //- a.btn.btn-outline-inverse.btn-lg(href='//github.com/silviomoreto/bootstrap-select/archive/v1.10.0.zip', role='button')
-  //-   i.fa.fa-download
-  //-   |  Download (v1.10.0)
-  //- .carbonad
-  //-   .carbonad-inner
-  //-   .charity
-  //-     | Ad revenue is donated to 
-  //-     a(href='http://www.projetocana.org/', target='_blank', rel='nofollow') Projecto Cana
-  //-     | .
+  // p Они изображают лица, погоду, транспорт, здания, еду и напитки, животных и растения, или иконки, передающие эмоции, чувства.
 
 block content
   - var sections = ['Природа и животные', 'Еда и напитки', 'Спорт', 'Путешествия', 'Значки', 'Символы', 'Флаги']
@@ -87,9 +77,7 @@ block content
   br
   .row
     .col-sm-12
-      script(type='text/javascript', src='https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js', charset='utf-8')
-      script(type='text/javascript', src='https://yastatic.net/share2/share.js', charset='utf-8')
-      .ya-share2(data-services='vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj')
+      include partials/share.html
   br
 
   .well.panel-narrow
@@ -98,3 +86,5 @@ block content
         each val, index in lang
           p
             span.lang-sm.lang-lbl-full(lang=val)
+block scripts
+  script(src='js/emoji.js')

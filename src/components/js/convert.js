@@ -1,13 +1,12 @@
-// copyright http://typing.su (sovtime.ru)
+// copyright http://typing.su
 
-var langSymbols = {
+const langSymbols = {
     ru: 'йцукенгшщзхъ\\фывапролджэячсмитьбю.ёЙЦУКЕНГШЩЗХЪ/ФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,Ё!"№;%:?*()_+',
     en: 'qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./`QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?~!@#$%^&*()_+',
     uk: 'йцукенгшщзхї\\фівапролджєячсмитьбю.\'ЙЦУКЕНГШЩЗХЇ/ФІВАПРОЛДЖЄЯЧСМИТЬБЮ,₴!"№;%:?*()_+',
     be: 'йцукенгшўзх\'\\фывапролджэячсмітьбю.ёЙЦУКЕНГШЎЗХ\'/ФЫВАПРОЛДЖЭЯЧСМІТЬБЮ,Ё!"№;%:?*()_+',
     uz: 'йцукенгшўзхъ\\фқвапролджэячсмитьбю.ёЙЦУКЕНГШЎЗХЪ/ФҚВАПРОЛДЖЭЯЧСМИТЬБЮ,Ё!"№;%:?*()ҒҲ',
     kk: 'йцукенгшщзхъ\\фывапролджэячсмитьбю№(ЙЦУКЕНГШЩЗХЪ/ФЫВАПРОЛДЖЭЯЧСМИТЬБЮ?)!ӘІҢҒ;:ҮҰҚӨҺ',
-    // ka: 'ქწერტყუიოპ[]~ასდფგჰჯკლ;\'ზხცვბნმ,./„ ჭ ღთ     {}| შ    ჟ ₾:"ძ ჩ  N <>?“!@#$%^&*()_+',
     az: 'qüertyuiopöğ\\asdfghjklıəzxcvbnmçş.`QÜERTYUİOPÖĞ/ASDFGHJKLIƏZXCVBNMÇŞ,~!"№;%:?*()_+',
     lt: 'qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./`QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?~ĄČĘĖĮŠŲŪ()_Ž',
     mo: 'qwertyuiopăîâasdfghjklșțzxcvbnm,./„QWERTYUIOPĂÎÂASDFGHJKLȘȚZXCVBNM;:?”!@#$%^&*()_+',
@@ -18,11 +17,11 @@ var langSymbols = {
     tk: 'äwertyuiopňöşasdfghjkl;\'züçýbnm,./žÄWERTYUIOPŇÖŞASDFGHJKL:"ZÜÇÝBNM<>?Ž!@#$%№&*()_+',
     et: 'qwertyuiopüõ\'asdfghjklöäzxcvbnm,.-ˇQWERTYUIOPÜÕ*ASDFGHJKLÖÄZXCVBNM;:_~!"#¤%&/()=?`'
 };
-var fromLang = '',
+let fromLang = '',
     toLang = '';
 
-function convert(text, lang1, lang2) {
-    var resultText = '';
+let convert = (text, lang1, lang2) => {
+    let resultText = '';
 
     if (lang1 === 'auto') {
         if (langSymbols[lang2].indexOf(text.charAt(1)) === -1) {
@@ -40,8 +39,8 @@ function convert(text, lang1, lang2) {
       toLang = langSymbols[lang2];
     }
 
-    for (var i = 0; i < text.length; i++) {
-        var j = fromLang.indexOf(text.charAt(i));
+    for (let i = 0; i < text.length; i++) {
+        let j = fromLang.indexOf(text.charAt(i));
         if (j < 0) {
             resultText += text.charAt(i);
         } else {
@@ -49,40 +48,40 @@ function convert(text, lang1, lang2) {
         }
     }
     return resultText;
-}
+};
 
-function output(form) {
+let output = (form) => {
     form.decoded.value = convert(form.coded.value, form.lang1.value, form.lang2.value);
-}
-function clear(form) {
+};
+let clear = (form) => {
     form.decoded.value = '';
     form.coded.value = '';
-}
+};
 
-function input(form, area, buttonStart, buttonClear, select1, select2) {
-    area.addEventListener('input', function() {
+let input = (form, area, buttonStart, buttonClear, select1, select2) => {
+    area.addEventListener('input', () => {
         output(form);
     }, false);
 
-    buttonStart.addEventListener('click', function() {
+    buttonStart.addEventListener('click', () => {
         output(form);
     }, false);
 
-    buttonClear.addEventListener('click', function() {
+    buttonClear.addEventListener('click', () => {
         clear(form);
     }, false);
 
-    select1.addEventListener('change', function() {
+    select1.addEventListener('change', () => {
         output(form);
     }, false);
 
-    select2.addEventListener('change', function() {
+    select2.addEventListener('change', () => {
         output(form);
     }, false);
-}
+};
 
-function onLoad() {
-    var form = document.getElementById('convert-form'),
+let onLoad = () => {
+    let form = document.getElementById('convert-form'),
     area = form.coded,
     button1 = document.getElementById('start-btn'),
     button2 = document.getElementById('clear-btn'),
@@ -90,8 +89,8 @@ function onLoad() {
     select2 = document.getElementById('lang2');
     
     input(form, area, button1, button2, select1, select2);
-}
+};
 
-window.onload = function() {
+window.onload = () => {
   onLoad();
 };

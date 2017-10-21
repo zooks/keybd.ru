@@ -5,8 +5,6 @@ block head
     | Online Конвертирование русской раскладки в английскую (16 языков: RU-EN, EN-RU, UK-EN, EN-UK, UK-RU)
   meta(name='keywords', content='раскладка, не та раскладка, неправильная раскладка, неверная раскладка, hfcrkflrf, опечатка, переключение раскладки клавиатуры, Punto Switcher онлайн')
   meta(name='description', content='Конвертирование текста, набранного в неправильной раскладке прямо из браузера. Если вы забыли переключить раскладку клавиатуры.')
-  script(src='js/convert.js')
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js")
 
                 
 block header
@@ -40,14 +38,14 @@ block content
       .col-md-6
         fieldset.form-group
           //- label(for='lang1') Исходный язык:
-          select.c-select(id='lang1')
+          select.custom-select(id='lang1')
             option.lang-sm.lang-lbl-full(value='auto', selected, lang='be') Авто
             each val, index in lang
               option(value=val)=langName[index]
       .col-md-6
         fieldset.form-group
           //- label(for='lang2') В какую раскладку сконвертировать:
-          select.c-select(id='lang2')
+          select.custom-select(id='lang2')
             each val, index in lang
               option(value=val)=langName[index]
             //- option Авто
@@ -60,9 +58,7 @@ block content
   br
   .row
     .col-sm-12
-      script(type='text/javascript', src='https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js', charset='utf-8')
-      script(type='text/javascript', src='https://yastatic.net/share2/share.js', charset='utf-8')
-      .ya-share2(data-services='vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,lj')
+      include partials/share.html
   br
     //- h3 Почему наш кодировщик лучше других аналогов?
   .jumbotron
@@ -85,7 +81,5 @@ block content
           p
             span.lang-sm.lang-lbl-full(lang=val)
 block scripts
-  script.
-    (function(){
-      new Clipboard('#copy-btn');
-    })();
+  script(src='js/home.js')
+
