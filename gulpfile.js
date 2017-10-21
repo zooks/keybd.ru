@@ -39,13 +39,10 @@ gulp.task('styles', () => { //gulp-sass
 });
 
 gulp.task('webpack', () => {
-    let options = {
-
-    };
     return gulp.src('src/components/js/*.js')
         .on('error', handleError)
-        .pipe(webpackStream(options))
-        .pipe(uglify())
+        // .pipe(webpackStream(options))
+        .pipe(webpackStream( require('./webpack.config.js') ))
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -83,7 +80,7 @@ gulp.task('images', () => {
 
 // HTML
 gulp.task('html', () => {
-    return gulp.src(['src/components/html/**/!(_)*.*', '!src/components/html/**/orig/*.*'])
+    return gulp.src(['src/components/html/**/!(_)*', '!src/components/html/**/orig/*'])
         .pipe(gulp.dest('dist/'))
         .pipe(refresh());
 });
