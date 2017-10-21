@@ -41,17 +41,16 @@ Thumbs.db
 node_modules
 npm-debug.log
 npm-shrinkwrap.json
-dist
 .tmp
 .sass-cache
 bower_components
 bower.json
 
 # user files
-app
 design
 fun
 test.*
+tmp
 temp
 orig
 

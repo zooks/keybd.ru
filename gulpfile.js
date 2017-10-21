@@ -29,7 +29,7 @@ gulp.task('styles', () => { //gulp-sass
         // .pipe(plumber())
         .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 11', 'Android >= 4.1', 'Safari >= 8', 'iOS >= 8']}))
         .pipe(duration('rebuilding files'))
-        .pipe(gulp.dest('app/assets/temp'))
+        .pipe(gulp.dest('temp/assets/temp'))
         // .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.init())//sourcemaps
         .pipe(minifycss())
