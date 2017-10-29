@@ -1,27 +1,35 @@
 {
   "name": "typing-su",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zooks/typing-su.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zooks/typing-su/issues"
+  },
   "devDependencies": {
     "connect-livereload": "^0.6.0",
-    "express": "^4.12.3",
+    "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-concat": "^2.5.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
     "gulp-duration": "0.0.0",
-    "gulp-jshint": "^2.0.0",
+    "gulp-jshint": "^2.0.4",
     "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.0.2",
+    "gulp-pug": "^3.3.0",
     "gulp-refresh": "^1.1.0",
-    "gulp-rename": "^1.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "jshint": "^2.8.0",
+    "jshint": "^2.9.5",
     "matchdep": "~2.0.0",
-    "pug": "^2.0.0-alpha7",
+    "pug": "^2.0.0-rc.4",
     "tiny-lr": "^1.0.5",
-    "webpack": "^3.7.1",
+    "webpack": "^3.8.1",
     "webpack-stream": "^4.0.0"
   },
   "dependencies": {
@@ -35,7 +43,7 @@
     "exports-loader": "^0.6.4",
     "flag-icon-css": "^2.8.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.5",
+    "popper.js": "^1.12.6",
     "vinyl-named": "^1.1.0"
   },
   "engines": {
