@@ -22,30 +22,54 @@ $browser-context: 16
     font-size: 1.5rem
   h3, h4, h5
     font-size: 1.25rem
-  .navbar-nav
-    clear: both
-    margin-left: 0
-    .nav-item + .nav-item
-      clear: both
-      margin-left: 0
-    .nav-item
-      float: none
-      margin-left: 0
-  .navbar-toggleable-xs
-    clear: both
+  //.navbar-nav
+  //  clear: both
+  //  margin-left: 0
+  //  .nav-item + .nav-item
+  //    clear: both
+  //    margin-left: 0
+  //  .nav-item
+  //    float: none
+  //    margin-left: 0
+  //.navbar-toggleable-xs
+  //  clear: both
   .bs-docs-header
     background-position: 0 -100px !important
   textarea
     height: 100px
   //#copy-btn
 
+.navbar-toggleable-xs
+  margin-top: 1rem
+
+.navbar
+  padding: 1.5rem 1rem
 
 .navbar-light
   .navbar-brand
     margin-right: 2rem
-    color: #c9302c
+    color: #494955
+    text-transform: uppercase
+    span
+      padding: .875rem
+      border: 1px solid lightgray
+      border-radius: 5px
+      background-color: #f5f2eb
+      margin-right: .375rem
+      box-shadow: 0 1px 1px #000000
+      font-size: .875rem
+      font-weight: bold
+      letter-spacing: .125rem
+      &.red
+        color: #c9302c
+
 .navbar-toggler
   font-size: 1.5rem
+
+.navbar-collapse
+  margin-top: 1.5rem
+  @media (min-width: 62em)
+    margin-top: 0
 
 .bs-docs-header
   background: #adb0b7 url(img/keyboard-829330_1920.jpg) no-repeat

@@ -8,8 +8,8 @@ html(lang='ru')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='search', type='application/opensearchdescription+xml', href='/opensearch.xml', title='Конвертация раскладки')
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel='stylesheet', href='css/convert.css')
   body
     block link
@@ -17,37 +17,32 @@ html(lang='ru')
     -var menu = { 'Раскладка': '/', 'Эмоджи': 'emoji.html' };
     //- { 'Что дальше?': 'touch-typing/', 'Спасибо': 'donate/' };
 
-    .navbar.navbar-light.bg-faded(role='navigation')
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light(role='navigation')
       .container
         // Collapsed navigation
-        .navbar-header
-          // Expander button
-          //- button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-          a.navbar-brand(href='.') Typing.su
-          button.navbar-toggler.hidden-sm-up.float-sm-right(type='button', data-toggle='collapse', data-target='#exCollapsingNavbar2') ≡
-          #exCollapsingNavbar2.collapse.navbar-toggleable-xs
-            // Main navigation
-            ul.nav.navbar-nav
-              each val, key in menu
-                if (selected === key)
-                  li.nav-item.active
-                    a.nav-link(href=val)
-                      = key
-                      span.sr-only (current)
-                else
-                  li.nav-item
-                    a.nav-link(href=val)= key
-            //-   li.nav-item
-            //-     a.nav-link(href='touch-typing/') Что дальше?
-            //-   li.nav-item
-            //-     a.nav-link(href='options/') Options
-            //-   li.nav-item
-            //-     a.nav-link(href='donate/') Спасибо
-            //- ul.nav.navbar-nav.float-sm-right
-            //-   li.nav-item
-            //-     a.nav-link(href='https://github.com/' rel='nofollow')
-            //-       i.fa.fa-github
-            //-       |  GitHub
+        a.navbar-brand(href='.')
+          span Typing
+          span.red .su
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          | ≡
+          //-span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          // Main navigation
+          ul.navbar-nav.mr-auto
+            each val, key in menu
+              if (selected === key)
+                li.nav-item.active
+                  a.nav-link(href=val)
+                    = key
+                    span.sr-only (current)
+              else
+                li.nav-item
+                  a.nav-link(href=val)= key
+          //- ul.nav.navbar-nav.float-sm-right
+          //-   li.nav-item
+          //-     a.nav-link(href='https://github.com/' rel='nofollow')
+          //-       i.fa.fa-github
+          //-       |  GitHub
 
     .jumbotron.bs-docs-header
       .container
@@ -62,11 +57,11 @@ html(lang='ru')
 
     footer.bd-footer
       .container
-        p.text-muted.float-sm-right © 2008–2017
+        p.text-muted.float-sm-right © 2008–2018
 
         include partials/counters.html
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js')
     block scripts
