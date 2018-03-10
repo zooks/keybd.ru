@@ -7,15 +7,10 @@ const gulp = require('gulp'),
     minifycss = require('gulp-clean-css'),
     sourcemaps = require('gulp-sourcemaps'),
     // rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
     refresh = require('gulp-refresh'),
-    plumber = require('gulp-plumber'),
     duration = require('gulp-duration'),
     webpackStream = require('webpack-stream'),
-    webpack = webpackStream.webpack,
-    named = require('vinyl-named');
+    webpack = webpackStream.webpack;
 
 function handleError(err) {
     console.log(err.toString());
@@ -26,7 +21,6 @@ gulp.task('styles', () => { //gulp-sass
     return gulp.src('src/components/sass/*.sass')
         .pipe(sass({ style: 'expanded' }))
         .on('error', handleError)
-        // .pipe(plumber())
         .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 11', 'Android >= 4.1', 'Safari >= 8', 'iOS >= 8']}))
         .pipe(duration('rebuilding files'))
         .pipe(gulp.dest('temp/assets/temp'))
@@ -46,20 +40,6 @@ gulp.task('webpack', () => {
         .pipe(gulp.dest('dist/js'));
 });
 
-
-// gulp.task('scripts', () => {
-//     return gulp.src('src/components/js/*.js')
-//         .pipe(jshint('.jshintrc'))
-//         .pipe(jshint.reporter('default'))
-//         .pipe(concat('main.js'))
-//         .pipe(gulp.dest('dist/js'))
-//         // .pipe(rename({suffix: '.min'}))
-//         // .pipe(uglify())
-//         .on('error', handleError)
-//         .pipe(gulp.dest('dist/js'))
-//         .pipe(duration('Scripts task complete'))
-//         .pipe(refresh());
-// });
 
 // Pug (Jade)
 gulp.task('pug', () => {

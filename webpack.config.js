@@ -19,27 +19,34 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
+      '$': 'jquery',
+      'jQuery': 'jquery',
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default'],
-      Clipboard: 'clipboard',
-      // Bootstrap: 'bootstrap',
-      // Util: "exports-loader?Util!bootstrap/js/dist/util",
+      ClipboardJS: 'clipboard',
+      Bootstrap: 'bootstrap',
+    //   // Util: "exports-loader?Util!bootstrap/js/dist/util",
     }),
-    new UglifyJSPlugin()
+    // new UglifyJSPlugin()
   ],
   externals: {
     jquery: 'jQuery',
     bootstrap: 'Bootstrap',
     popper: 'popper.js',
-    clipboard: 'Clipboard',
+    clipboard: 'ClipboardJS',
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader?presets[]=es2015'
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      }
+    ]
   }
 };
