@@ -2,7 +2,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, 'src/components/js/'),
@@ -26,8 +25,7 @@ module.exports = {
       ClipboardJS: 'clipboard',
       Bootstrap: 'bootstrap',
     //   // Util: "exports-loader?Util!bootstrap/js/dist/util",
-    }),
-    // new UglifyJSPlugin()
+    })
   ],
   externals: {
     jquery: 'jQuery',
