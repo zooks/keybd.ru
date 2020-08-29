@@ -1,6 +1,6 @@
 {
   "name": "typing-su",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zooks/typing-su.git"
@@ -10,36 +10,11 @@
     "url": "https://github.com/zooks/typing-su/issues"
   },
   "devDependencies": {
-    "connect-livereload": "^0.6.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "express": "^4.16.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.3",
-    "gulp-duration": "0.0.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-refresh": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11",
-    "webpack-stream": "^4.0.2"
+    "node-sass": "^4.14.1",
+    "pug": "^3.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
-    "@fortawesome/fontawesome-free-solid": "^5.0.8",
-    "bootstrap": "4.0.0",
-    "bootstrap-languages": "usrz/bootstrap-languages#*",
-    "clipboard": "^2.0.0",
-    "exports-loader": "^0.7.0",
-    "flag-icon-css": "^3.0.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
-  },
-  "engines": {
-    "yarn": ">= 1.0.0"
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^5.0.0-alpha1"
   }
 }

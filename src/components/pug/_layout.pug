@@ -6,11 +6,10 @@ html(lang='ru')
     meta(charset='UTF-8')
     block head
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     link(rel='search', type='application/opensearchdescription+xml', href='/opensearch.xml', title='Конвертация раскладки')
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css")
-    //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha512-weZatQD41YXNCVn3Bvl2y1iAZqtH/Y+MlAQUwovog1iwj8cbSEpQMeErMnDp9CBlqIo0oxOcOF8GUEoOZYD4Zg==" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous")
     link(rel='stylesheet', href='css/convert.css')
   body
     block link
@@ -25,7 +24,9 @@ html(lang='ru')
           span Typing
           span.red .su
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-          | ≡
+          //| ≡
+          span.text-black-50
+            i.fas.fa-bars
           //-span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
           // Main navigation
@@ -45,24 +46,29 @@ html(lang='ru')
           //-       i.fab.fa-github
           //-       |  GitHub
 
-    .jumbotron.bs-docs-header
+    .bs-docs-header
       .container
-        block header
-          h1 Исправление текста в неправильной раскладке
-          p.lead
-            each val, index in lang
-              span(class="flag flag-"+val title=langName[index])
+        .row
+          block header
+            .col-md-12
+              h1 Исправление текста в неправильной раскладке
+              p.lead
+                each val, index in lang
+                  span(class="flag flag-"+val title=langName[index])
+
+
 
     main.container
       block content
 
     footer.bd-footer
       .container
-        p.text-muted.float-sm-right © 2008–2018
+        p.text-muted.float-sm-right © 2020 
+          a.text-reset(href='https://zooks.ru' rel='nofollow') Zooks
 
         include partials/counters.html
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" integrity="sha512-hCP3piYGSBPqnXypdKxKPSOzBHF75oU8wQ81a6OiGXHFMeKs9/8ChbgYl7pUvwImXJb03N4bs1o1DzmbokeeFw==" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha512-lmArColmgJ0LRo8c6rZwAhB3mVVSFSsrpqOrmtXMgOFYu8VOwdxTliXrHYdsdmututXwD0Xc1GiGvZlHgNAh4g==" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha512-hDWGyh+Iy4Mr9AHOzUP2+Y0iVPn/BwxxaoSleEjH/i1o4EVTF/sh0/A1Syii8PWOae+uPr+T/KHwynoebSuAhw==" crossorigin="anonymous")
+    script(src='js/main.js')
     block scripts

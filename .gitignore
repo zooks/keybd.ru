@@ -45,6 +45,8 @@ npm-shrinkwrap.json
 .sass-cache
 bower_components
 bower.json
+package-lock.json
+prepros.config
 
 # user files
 design

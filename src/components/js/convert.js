@@ -1,4 +1,4 @@
-// copyright http://typing.su
+// copyright Zooks https://typing.su
 
 const langSymbols = {
     ru: 'йцукенгшщзхъ\\фывапролджэячсмитьбю.ёЙЦУКЕНГШЩЗХЪ/ФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,Ё!"№;%:?*()_+',
