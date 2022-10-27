@@ -1,5 +1,5 @@
-import React from 'react';
-import {Route, Routes} from 'react-router-dom'
+import React, {useEffect} from 'react';
+import {Route, Routes, useLocation} from 'react-router-dom'
 import {MainPage} from "./pages/MainPage";
 import {EmojiPage} from "./pages/EmojiPage";
 import './App.sass';

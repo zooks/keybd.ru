@@ -3,7 +3,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-// import * from "../convert";
 import {convert} from "../Convert";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCopy, faBolt} from '@fortawesome/free-solid-svg-icons';
@@ -116,7 +115,7 @@ export function LayoutForm() {
                             variant="info"
                             type="button"
                             >
-                            <FontAwesomeIcon icon={faBolt} title="start" /> <strong>Старт!</strong></Button>{' '}
+                            <FontAwesomeIcon icon={faBolt} title="start" /> Старт!</Button>{' '}
                         <Button
                             onClick={() => {navigator.clipboard.writeText(valueDecoded)}}
                             variant="light"

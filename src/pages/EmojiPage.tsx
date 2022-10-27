@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
 import {DocsHeader} from "../components/DocsHeader";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
@@ -51,6 +52,10 @@ export function EmojiPage() {
     ]
     return (
         <>
+            <Helmet>
+                <title>Онлайн эмоджи для набора с компьютера</title>
+                <meta name="description" content="Набрать смайлы эмодзи на компьютере. Коды не нужны!" />
+            </Helmet>
             <DocsHeader title="Эмоджи/эмодзи (Emoji)" lead="Emoji — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
             <main>
                 <Container>

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
 import {DocsHeader} from "../components/DocsHeader";
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
@@ -29,6 +30,10 @@ export function MainPage() {
 
     return (
         <div>
+            <Helmet>
+                <title>Онлайн смена раскладки клавиатуры: с русской на английскую и обратно (16 языков)</title>
+                <meta name="description" content="Перевод раскладки онлайн для текста набранного в неправильной раскладке: если вы забыли переключить раскладку клавиатуры." />
+            </Helmet>
             <DocsHeader
                 title="Исправление текста в неправильной раскладке"
                 lead={
