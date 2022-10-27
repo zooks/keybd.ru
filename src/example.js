@@ -1,0 +1,1 @@
+export function myfunc(){return "Your JS stuff here"}

@@ -1,0 +1,74 @@
+:root {
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+
+    --bs-link-color: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+}
+html.dark {
+  --bs-body-color: #fff;
+  --bs-body-bg: #212529;
+  --bs-gray-600: #ced4da;
+
+  --bs-link-color: #0dcaf0;
+  --bs-link-hover-color: #0bb8da;
+
+  .navbar-light {
+    --bs-navbar-color: rgba(255, 255, 255, 0.55);
+    --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
+    --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
+    --bs-navbar-active-color: #fff;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+    --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e);
+  }
+
+  .nav-tabs {
+    --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+    --bs-nav-tabs-link-active-color: var(--bs-body-color);
+    --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 var(--bs-body-bg);
+  }
+
+  .alert-info {
+    --bs-alert-bg: rgb(207 244 252 / 80%);
+    --bs-alert-border-color: rgb(182 239 251 / 80%);
+  }
+
+  .alert-warning {
+    --bs-alert-bg: rgb(255 243 205 / 80%);
+    --bs-alert-border-color: rgb(255 236 181 / 80%);
+  }
+
+  .bg-light {
+    background-color: var(--bs-gray-800) !important;
+  }
+
+  kbd {
+    color: #fff;
+    background-color: #212529;
+  }
+  .form-control, .form-select {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+  }
+  .navbar-light .navbar-brand {
+    color: #fff;
+    
+    span {
+      border: 1px solid #000000;
+      background-color: #212529;
+    }
+  }
+}
