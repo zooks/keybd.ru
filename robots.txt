@@ -1,6 +1,8 @@
 User-agent: *
 Disallow: 
+Sitemap: https://typing.su/sitemap.txt
 
 User-agent: Yandex
 Host: https://typing.su
 Disallow: 
+Sitemap: https://typing.su/sitemap.txt
