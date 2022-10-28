@@ -66,7 +66,7 @@ export function EmojiPage() {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={seoData.title} />
                 <meta property="og:description" content={seoData.description} />
-                <meta property="og:url" content="https://typing.su/?/emoji" />
+                <meta property="og:url" content="https://typing.su/#/emoji" />
                 <meta property="og:site_name" content={seoData.site_name} />
             </Helmet>
             <DocsHeader title="Эмоджи/эмодзи (Emoji)" lead="Emoji — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />

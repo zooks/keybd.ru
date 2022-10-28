@@ -10,7 +10,7 @@ export function Navigation() {
     return (
         <Navbar bg="light" variant="light" expand="lg">
             <Container>
-                <Navbar.Brand href="/">
+                <Navbar.Brand as={NavLink} to="/">
                     <span>Typing</span><span className="red">.su</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarSupportedContent" />
