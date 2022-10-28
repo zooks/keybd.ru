@@ -38,7 +38,7 @@ export function MainPage() {
         <div>
             <Helmet>
                 <title>{seoData.title}</title>
-                <meta name="description" content="" />
+                <meta name="description" content={seoData.description} />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={seoData.title} />
