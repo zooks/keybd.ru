@@ -28,11 +28,23 @@ export function MainPage() {
         'et': 'Eesti (Эстонский)'
     }
 
+    const seoData = {
+        title: 'Онлайн смена раскладки клавиатуры: с русской на английскую и обратно (16 языков)',
+        description: 'Перевод раскладки онлайн для текста набранного в неправильной раскладке: если вы забыли переключить раскладку клавиатуры.',
+        site_name: 'Typing.su'
+    }
+
     return (
         <div>
             <Helmet>
-                <title>Онлайн смена раскладки клавиатуры: с русской на английскую и обратно (16 языков)</title>
-                <meta name="description" content="Перевод раскладки онлайн для текста набранного в неправильной раскладке: если вы забыли переключить раскладку клавиатуры." />
+                <title>{seoData.title}</title>
+                <meta name="description" content="" />
+                <meta property="og:locale" content="ru_RU" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={seoData.title} />
+                <meta property="og:description" content={seoData.description} />
+                <meta property="og:url" content="https://typing.su/" />
+                <meta property="og:site_name" content={seoData.site_name} />
             </Helmet>
             <DocsHeader
                 title="Исправление текста в неправильной раскладке"

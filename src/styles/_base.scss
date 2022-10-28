@@ -42,10 +42,6 @@ kbd {
     font-size: 1.25rem;
   }
 
-  .bs-docs-header {
-    background-position: 0 -100px !important;
-  }
-
   textarea {
     height: 100px;
   }
@@ -108,7 +104,7 @@ kbd {
   background: #adb0b7 url(../img/keyboard-829330_1920.jpg) no-repeat;
   background: #adb0b7 url(../img/keyboard-829330_1920.webp) no-repeat;
 
-  //background-size: cover
+  background-size: cover;
 
   margin-bottom: 2rem;
   padding: 2rem 1rem;
