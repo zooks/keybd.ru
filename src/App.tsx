@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom'
 import {MainPage} from "./pages/MainPage";
 import {EmojiPage} from "./pages/EmojiPage";
-import './App.sass';
+import './App.scss';
 import {Navigation} from "./components/Navigation";
 import {Footer} from "./components/Footer";
 

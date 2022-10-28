@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import DarkMode from '../DarkMode';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export function Navigation() {
@@ -25,6 +26,7 @@ export function Navigation() {
                         >Раскладка</Nav.Link>
                         <Nav.Link as={NavLink} to="/emoji">Эмоджи</Nav.Link>
                     </Nav>
+                    <DarkMode />
                 </Navbar.Collapse>
             </Container>
         </Navbar>

@@ -16,7 +16,8 @@
     --bs-link-color: #0d6efd;
     --bs-link-hover-color: #0a58ca;
 }
-html.dark {
+
+[data-theme="dark"] {
   --bs-body-color: #fff;
   --bs-body-bg: #212529;
   --bs-gray-600: #ced4da;

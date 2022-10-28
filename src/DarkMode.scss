@@ -1,0 +1,62 @@
+/* Custom Dark Mode Toggle Element */
+
+.toggle-theme-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+
+  span {
+    font-size: 1.125rem;
+    color: var(--bs-navbar-color);
+  }
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 34px;
+  width: 60px;
+
+  input {
+    display: none;
+  }
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.1s;
+
+  &:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.15s;
+    width: 26px;
+  }
+}
+
+input:checked + .slider {
+  &:before {
+    transform: translateX(26px);
+  }
+
+  background-color: cornflowerblue;
+}
+
+.slider.round {
+  border-radius: 34px;
+
+  &:before {
+    border-radius: 50%;
+  }
+}
