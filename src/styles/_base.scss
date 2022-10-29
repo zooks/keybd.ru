@@ -243,6 +243,8 @@ kbd {
 
 .emoji {
   p {
+    display: flex;
+    flex-wrap: wrap;
     font-family: Segoe UI Emoji;
     font-size: 2.5rem;
   }

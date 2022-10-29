@@ -72,7 +72,7 @@ export function EmojiPage() {
             <DocsHeader title="Эмоджи/эмодзи (Emoji)" lead="Emoji — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
             <main>
                 <Container>
-                    <Alert key="info" variant="info">
+                    <Alert key="info" variant="info" className="d-none d-md-block">
 
                         <p>
                             Скопируйте <kbd>Ctrl + C</kbd> понравившиеся эмоджи<span
