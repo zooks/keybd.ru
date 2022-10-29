@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {LayoutForm} from "../components/LayoutForm";
+import {Features} from '../components/Features';
 
 export function MainPage() {
 
@@ -28,6 +29,12 @@ export function MainPage() {
         'et': 'Eesti (Эстонский)'
     }
 
+    const featuresList = [
+        {title: 'Безопасно', iconName: 'shield', desc: 'Ваш текст не отправляется на сервер, поэтому исключена возможность его прочтения'},
+        {title: 'Быстро', iconName: 'flash', desc: 'Мгновенное кодирование без расходования трафика'},
+        {title: 'Легко', iconName: 'star', desc: 'Не требуется устанавливать на компьютер дополнительные программы, просто добавьте страницу в закладки браузера'},
+    ]
+
     const seoData = {
         title: 'Онлайн смена раскладки клавиатуры: с русской на английскую и обратно (16 языков)',
         description: 'Перевод раскладки онлайн для текста набранного в неправильной раскладке: если вы забыли переключить раскладку клавиатуры.',
@@ -46,6 +53,7 @@ export function MainPage() {
                 <meta property="og:url" content="https://typing.su/" />
                 <meta property="og:site_name" content={seoData.site_name} />
             </Helmet>
+
             <DocsHeader
                 title="Исправление текста в неправильной раскладке"
                 lead={
@@ -54,8 +62,11 @@ export function MainPage() {
                     </>
                 }
             />
+
             <main>
+
                 <Container>
+
                     <div className="intro">
                         <div className="sr-only">
                             <strong>Пример:</strong>
@@ -66,28 +77,11 @@ export function MainPage() {
                         </p>
                     </div>
                     <br/>
+
                     <LayoutForm></LayoutForm>
-                    <div className="features bg-light p-4 mb-5">
-                        <div className="text-center">
-                            <h4 className="sr-only">Особенности кодировщика</h4>
-                            <Row>
-                                <Col xs={6} sm={4}><i className="features-icon features-icon-shield"></i>
-                                    <h5>Безопасно</h5>
-                                    <p>Ваш текст не отправляется на сервер, поэтому исключена возможность его
-                                        прочтения</p>
-                                </Col>
-                                <Col xs={6} sm={4}><i className="features-icon features-icon-flash"></i>
-                                    <h5>Быстро</h5>
-                                    <p>Мгновенное кодирование без расходования трафика</p>
-                                </Col>
-                                <Col xs="auto" sm={4}><i className="features-icon features-icon-star"></i>
-                                    <h5>Легко</h5>
-                                    <p>Не требуется устанавливать на компьютер дополнительные программы,<br/>
-                                        просто добавьте страницу в закладки браузера</p>
-                                </Col>
-                            </Row>
-                        </div>
-                    </div>
+
+                    <Features list={featuresList}></Features>
+
                     <div className="well panel-narrow">
                         <Row>
                             <Col md={12}>
@@ -105,7 +99,9 @@ export function MainPage() {
                             </Col>
                         </Row>
                     </div>
+
                 </Container>
+
             </main>
         </div>
     )

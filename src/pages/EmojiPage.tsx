@@ -113,8 +113,8 @@ export function EmojiPage() {
                             {emojiGroups.map((group, index) =>
                                 <Tab as="section" eventKey={'tab' + index} title={group.title}>
                                     <p>
-                                        {group.content.split(' ').map((value) => (
-                                          <span key={value}>{value}</span>
+                                        {group.content.split(' ').map((value, index) => (
+                                          <span key={index}>{value}</span>
                                         ))}
 
                                     </p>
