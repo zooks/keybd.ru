@@ -245,6 +245,7 @@ kbd {
   p {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     font-family: Segoe UI Emoji;
     font-size: 2.5rem;
   }
