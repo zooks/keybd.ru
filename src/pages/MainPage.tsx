@@ -58,7 +58,7 @@ export function MainPage() {
                 <Container>
                     <div className="intro">
                         <div className="sr-only">
-                            <h6>Пример:</h6>
+                            <strong>Пример:</strong>
                         </div>
                         <p>
                             <strong>Ghbdtn! </strong><FontAwesomeIcon icon={faLongArrowAltRight} /><strong> Привет! 🇷🇺</strong>

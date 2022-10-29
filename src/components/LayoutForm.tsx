@@ -53,6 +53,7 @@ export function LayoutForm() {
                     <fieldset className="mb-3">
                         <label className="form-label" htmlFor="coded">Исходный текст</label>
                         <textarea
+                            id="coded"
                             onChange={changeHandler}
                             value={value}
                             className="form-control"
@@ -68,6 +69,7 @@ export function LayoutForm() {
                     <fieldset className="mb-3">
                         <label className="form-label" htmlFor="decoded">Восстановленный текст</label>
                         <textarea
+                            id="decoded"
                             onChange={changeHandler}
                             value={valueDecoded}
                             className="form-control"
