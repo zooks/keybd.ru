@@ -24,7 +24,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "https://typing.su",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
