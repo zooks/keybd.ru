@@ -245,9 +245,14 @@ kbd {
   p {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 0 -.25rem;
+
     font-family: Segoe UI Emoji;
     font-size: 2.5rem;
+    span {
+      padding: 0 .25rem;
+    }
   }
 
   h2 {
