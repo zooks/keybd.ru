@@ -50,7 +50,7 @@ input:checked + .slider {
     transform: translateX(26px);
   }
 
-  background-color: cornflowerblue;
+  background-color: #0dcaf0; //var(--bs-nav-link-color);
 }
 
 .slider.round {
