@@ -106,7 +106,6 @@ kbd {
 
   background-size: cover;
 
-  margin-bottom: 2rem;
   padding: 2rem 1rem;
   background-color: #e9ecef;
 
@@ -116,14 +115,21 @@ kbd {
     color: white;
     text-shadow: 1px 1px 2px black;
   }
+  .lead {
+    font-size: 1rem;
+  }
 
   //p
   //  display: none
 }
 
+main {
+  padding: 2rem 0;
+}
+
 .bd-footer {
   padding: 4rem 0;
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 85%;
   text-align: center;
 }
@@ -242,6 +248,7 @@ kbd {
 }
 
 .emoji {
+  margin-bottom: 2rem;
   p {
     display: flex;
     flex-wrap: wrap;
@@ -251,7 +258,13 @@ kbd {
     font-family: Segoe UI Emoji;
     font-size: 2.5rem;
     span {
+      cursor: pointer;
+      user-select: none;
       padding: 0 .25rem;
+      transition: transform 0.1s ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+      }
     }
   }
 

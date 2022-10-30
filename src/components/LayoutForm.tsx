@@ -14,14 +14,22 @@ export function LayoutForm() {
     const [valueSelectEnc, setValueSelectEnc] = useState('auto');
     const [valueSelectDec, setValueSelectDec] = useState('ru');
 
+    function decode(value: string) {
+        setValueDecoded(convert(value, valueSelectEnc, valueSelectDec));
+    }
+
     const changeHandler = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
         setValue(event.target.value);
-        setValueDecoded(convert(event.target.value, valueSelectEnc, valueSelectDec));
+        decode(value);
     }
 
     function handleSelect(event: React.FormEvent<HTMLSelectElement>) {
         setValueSelectEnc(event.currentTarget.value);
-     }
+    }
+
+    function handleClick() {
+        decode(value);
+    }
 
     function clearForms() {
         setValue('');
@@ -116,6 +124,7 @@ export function LayoutForm() {
                         <Button
                             variant="info"
                             type="button"
+                            onClick={handleClick}
                             >
                             <FontAwesomeIcon icon={faBolt} title="start" /> Старт!</Button>{' '}
                         <Button
