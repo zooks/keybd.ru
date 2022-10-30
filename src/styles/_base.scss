@@ -31,7 +31,8 @@ kbd {
 
 @media (max-width: 34em) {
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 
   h2 {
@@ -46,7 +47,9 @@ kbd {
     height: 100px;
   }
 
-  //#copy-btn
+  .lead {
+    display: none;
+  }
 }
 
 @media (min-width: 36em) {
@@ -93,7 +96,15 @@ kbd {
 }
 
 .navbar-collapse {
-  margin-top: 1.5rem;
+  // display: flex;
+  // flex-direction: column-reverse;
+  &-end {
+    text-align: right;
+  } 
+}
+
+.navbar-nav {
+  margin-top: 1rem !important;
 
   @media (min-width: 62em) {
     margin-top: 0;
@@ -101,6 +112,8 @@ kbd {
 }
 
 .bs-docs-header {
+  min-height: 112px;
+
   background: #adb0b7 url(../img/keyboard-829330_1920.jpg) no-repeat;
   background: #adb0b7 url(../img/keyboard-829330_1920.webp) no-repeat;
 
@@ -114,6 +127,7 @@ kbd {
   h1, p {
     color: white;
     text-shadow: 1px 1px 2px black;
+    // text-shadow: 1px 2px 10px black;
   }
   .lead {
     font-size: 1rem;

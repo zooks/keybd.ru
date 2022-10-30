@@ -20,7 +20,7 @@ export function LayoutForm() {
 
     const changeHandler = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
         setValue(event.target.value);
-        decode(value);
+        decode(event.target.value);
     }
 
     function handleSelect(event: React.FormEvent<HTMLSelectElement>) {

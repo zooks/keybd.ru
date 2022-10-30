@@ -55,7 +55,7 @@ export function MainPage() {
             </Helmet>
 
             <DocsHeader
-                title="Исправление текста в неправильной раскладке"
+                title="Исправление текста в неправильной раскладке"
                 lead={
                     <>
                         { Object.keys(langs).map((lang, index) => <span key={lang} className={'flag flag-' + lang} title={langs[lang as keyof typeof langs]}></span>) }

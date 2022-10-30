@@ -26,7 +26,9 @@ export function Navigation() {
                         >Раскладка</Nav.Link>
                         <Nav.Link as={NavLink} to="/emoji">Эмоджи</Nav.Link>
                     </Nav>
-                    <DarkMode />
+                    <div className="navbar-collapse-end">
+                        <DarkMode />
+                    </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
