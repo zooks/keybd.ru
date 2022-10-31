@@ -21,6 +21,10 @@ export function EmojiPage() {
 
     const emojiGroups = [
         {
+            title: 'Популярные',
+            content: '❤️ 😂 🤣 ✨ 😍 😯 😭 🥺 🙏 🥰 😊 ❤️‍🔥 💕 👍 👋'
+        },
+        {
             title: 'Смайлы и люди',
             content: '😀 😬 😁 😂 😃 😄 😅 😆 😇 😉 😊 🙂 🙃 ☺️ 😋 😌 😍 😘 😗 😙 😚 😜 😝 😛 🤑 🤓 😎 🤗 😏 😶 😐 😑 😒 🙄 🤔 😳 😞 😟 😠 😡 😔 😕 🙁 ☹️ 😣 😖 😫 😩 😤 😮 😱 😨 😰 😯 😦 😧 😢 😥 😪 😓 😭 😵 😲 🤐 😷 🤒 🤕 😴 💤 💩 😈 👿 👹 👺 💀 👻 👽 🤖 😺 😸 😹 😻 😼 😽 🙀 😿 😾 🙌 👏 👋 👍 👊 ✊ ✌️ 👌 ✋ 💪 🙏 ☝️ 👆 👇 👈 👉 🖕 🤘 🖖 ✍️ 💅 👄 👅 👂 👃 👁 👀 👤 🗣 👶 👦 👧 👨 👩 👱 👴 👵 👲 👳 👮 👷 💂 🕵 🎅 👼 👸 👰 🚶 🏃 💃 👯 👫 👬 👭 🙇 💁 🙅 🙆 🙋 🙎 🙍 💇 💆 💑 👩‍❤️‍👩 👨‍❤️‍👨 💏 👩‍❤️‍💋‍👩 👨‍❤️‍💋‍👨 👪 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👚 👕 👖 👔 👗 👙 👘 💄 💋 👣 👠 👡 👢 👞 👟 👒 🎩 ⛑ 🎓 👑 🎒 👝 👛 👜 💼 👓 🕶 💍 🌂',
         },
@@ -55,8 +59,8 @@ export function EmojiPage() {
     ]
 
     const seoData = {
-        title: 'Онлайн эмоджи для набора с компьютера',
-        description: 'Набрать смайлы эмодзи на компьютере. Коды не нужны!',
+        title: 'Онлайн эмодзи для набора с компьютера, скопировать эмодзи',
+        description: 'Набрать смайлы эмодзи/эмоджи на компьютере. Коды не нужны!',
         site_name: 'Typing.su'
     }
 
@@ -84,7 +88,7 @@ export function EmojiPage() {
                 <meta property="og:url" content="https://typing.su/#/emoji" />
                 <meta property="og:site_name" content={seoData.site_name} />
             </Helmet>
-            <DocsHeader title="Эмоджи/эмодзи (Emoji)" lead="Emoji — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
+            <DocsHeader title="Эмодзи (Emoji)" lead="Эмодзи — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
             <main>
                 <Container>
 
@@ -138,8 +142,8 @@ export function EmojiPage() {
                     </div>
                     <Alert key="info" variant="info">
                         <p>
-                            Нажмите на понравившиеся эмоджи<span
-                            className="emoji"> 😊 </span>, чтобы добавить их в поле ниже. Затем скопируйте
+                            Нажмите на понравившиеся <strong>эмодзи</strong><span
+                            className="emoji"> 😊 </span>, чтобы добавить их в поле выше. Затем скопируйте
                             всё поле.
                         </p>
                         <p className="d-none d-md-block mb-0">
@@ -153,7 +157,7 @@ export function EmojiPage() {
                                 <FontAwesomeIcon icon={faWindows} title="Win" />
                                  + .
                             </kbd>{' '}
-                            — появится панель с эмоджи.
+                            — появится панель с эмодзи.
                         </p>
                     </Alert>
                     <Alert key="warning" variant="warning">
