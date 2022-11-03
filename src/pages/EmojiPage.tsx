@@ -22,7 +22,7 @@ export function EmojiPage() {
 
 
     const seoData = {
-        title: 'Онлайн эмодзи для набора с компьютера, скопировать эмодзи',
+        title: 'Онлайн эмодзи для набора с компьютера, скопировать эмодзи, клавиатура эмодзи',
         description: 'Набрать смайлы эмодзи/эмоджи на компьютере. Коды не нужны!',
         site_name: 'Typing.su'
     }
@@ -51,7 +51,7 @@ export function EmojiPage() {
                 <meta property="og:url" content="https://typing.su/#/emoji" />
                 <meta property="og:site_name" content={seoData.site_name} />
             </Helmet>
-            <DocsHeader title="Эмодзи (Emoji)" lead="Эмодзи — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
+            <DocsHeader title="Клавиатура эмодзи (Emoji)" lead="Эмодзи — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
             <main>
                 <Container>
 
