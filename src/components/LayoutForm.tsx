@@ -53,7 +53,7 @@ export function LayoutForm() {
         'tk': '🇹🇲  Türkmen (Туркменский)',
         'et': '🇪🇪  Eesti (Эстонский)'
     }
-  
+
     return (
         <Form className="mb-5" id="convert-form">
             <Row>
@@ -70,6 +70,7 @@ export function LayoutForm() {
                             autoComplete="off" autoCorrect="off" autoCapitalize="off"
                             spellCheck="false"
                             placeholder="Вставьте сюда текст в неправильной раскладке"
+                            autoFocus
                         />
                     </fieldset>
                 </Col>
