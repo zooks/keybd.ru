@@ -132,7 +132,6 @@ export function LayoutForm() {
                             onClick={() => {navigator.clipboard.writeText(valueDecoded)}}
                             variant="light"
                             type="button"
-                            data-clipboard-target="#decoded"
                             >
                             <FontAwesomeIcon icon={faCopy} title="copy" /> Копировать
                         </Button>{' '}

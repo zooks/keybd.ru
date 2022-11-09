@@ -72,7 +72,6 @@ export function EmojiPage() {
                                         onClick={() => {navigator.clipboard.writeText(value)}}
                                         variant="light"
                                         type="button"
-                                        data-clipboard-target="#decoded"
                                         >
                                         <FontAwesomeIcon icon={faCopy} title="copy" /> Копировать
                                     </Button>{' '}
