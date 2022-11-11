@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {LayoutForm} from "../components/LayoutForm";
 import {Features} from '../components/Features';
+import { LayoutKeyboard } from '../components/LayoutKeyboard';
 
 export function MainPage() {
 
@@ -80,12 +81,15 @@ export function MainPage() {
 
                     <LayoutForm></LayoutForm>
 
+                    <h2 className="sr-only">Русская клавиатура онлайн</h2>
+                    <LayoutKeyboard></LayoutKeyboard>
+
                     <Features list={featuresList}></Features>
 
                     <div className="well panel-narrow">
                         <Row>
                             <Col md={12}>
-                                <small>
+                                <div className="small">
                                     <p>Бывают ситуации когда вы долго
                                     печатали текст, но взглянув на монитор поняли, что забыли <strong>переключить раскладку
                                     клавиатуры</strong>, и текст оказался набран впустую. Или ваш собеседник отправил сообщение не
@@ -96,7 +100,7 @@ export function MainPage() {
                                     буфер обмена. Он также преобразуется автоматически.
                                     </p>
                                     <p><strong>Поддерживаемые языки (раскладки):</strong> Русский, Английский, Украинский, Белорусский, Узбекский, Казахский, Азербайджанский, Литовский, Молдавский, Латышский, Киргизский, Таджикский, Армянский, Туркменский, Эстонский. Список будет пополняться.</p>
-                                </small>
+                                </div>
                             </Col>
                         </Row>
                     </div>
