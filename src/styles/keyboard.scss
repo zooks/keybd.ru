@@ -1,11 +1,11 @@
 .keyboard {
-    --margins: .25em;//.375em;
+    --margins: .3125em;//.375em;
 
     user-select: none;
-    max-width: 44em;
+    max-width: 43.5em;
     margin: 0 auto;
     background-color: rgba(0,0,0,.1);
-    padding: var(--margins);
+    padding: .5em;
     border-radius: .25em;
     font-size: 1rem;
 
@@ -16,7 +16,7 @@
     }
 
     @media (min-width: 1200px) {
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
     }
 
     @media (min-width: 1400px) {
@@ -76,7 +76,7 @@
 
         @media (min-width: 768px) {
             display: flex;
-            padding: .25em .25em .25em .5em;
+            padding: .25em .25em .25em .625em;
         }
     }
     &_wide {
@@ -89,6 +89,7 @@
     }
     &_symbol {
         justify-content: center;
+        padding: 0.25em;
 
         span {
             font-size: 0.75em;
