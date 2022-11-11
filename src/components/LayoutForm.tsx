@@ -55,7 +55,7 @@ export function LayoutForm() {
     }
 
     return (
-        <Form className="mb-5" id="convert-form">
+        <Form className="mb-3" id="convert-form">
             <Row>
                 <Col sm={6}>
                     <fieldset className="mb-3">
@@ -95,10 +95,8 @@ export function LayoutForm() {
                         <select
                             value={valueSelectEnc}
                             onChange={handleSelect}
-                            className="form-select
-                            mb-3"
-                            aria-label="Исходный
-                            язык"
+                            className="form-select"
+                            aria-label="Исходный язык"
                             >
                             <option className="lang-sm lang-lbl-full" value="auto">Авто
                             </option>
@@ -113,7 +111,7 @@ export function LayoutForm() {
                         <select
                             value={valueSelectDec}
                             onChange={(event) => setValueSelectDec(event.target.value)}
-                            className="form-select mb-3"
+                            className="form-select"
                             aria-label="В какую раскладку сконвертировать"
                             >
                             { Object.keys(langs).map((lang) => 
