@@ -16,7 +16,7 @@ export function TextCaseForm() {
 
     function convertCase (text: string, convertTo: string) {
 
-        switch (convertTo) {            
+        switch (convertTo) {
             case 'auto':
                 const resultText = text.split('').map(function(char) {
                     return char === char.toUpperCase()
@@ -26,7 +26,7 @@ export function TextCaseForm() {
 
                 return resultText;
             case 'toUpper':
-                return text.toUpperCase();    
+                return text.toUpperCase();
             case 'toLower':
                 return text.toLowerCase();
             default:
@@ -112,7 +112,7 @@ export function TextCaseForm() {
                                 </ToggleButton>
                             ))}
                         </ButtonGroup>
-                        {/* {radioOptions.map((item, index) =>    
+                        {/* {radioOptions.map((item, index) =>
                             <Form.Check
                                 key={item.key}
                                 value={item.value}

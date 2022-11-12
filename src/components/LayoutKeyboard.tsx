@@ -25,7 +25,7 @@ export function LayoutKeyboard() {
                     )}
 
                     {/* Main symbols */}
-                
+
                     {allSymbols.slice(row.range[0], row.range[1]).map((item, index) =>
                         <Key key={`key-main-${index}`} symbol={item} className={'text-uppercase ' + ( (item === allSymbols[12]) ? 'keyboardKey_auto keyboardKey_smaller' : '' )}></Key>
                     )}

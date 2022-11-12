@@ -102,7 +102,7 @@ export function LayoutForm() {
                             >
                             <option className="lang-sm lang-lbl-full" value="auto">Авто
                             </option>
-                            { Object.keys(langs).map((lang) => 
+                            { Object.keys(langs).map((lang) =>
                                 <option key={lang} value={lang}>{langs[lang as keyof typeof langs]}</option>
                             ) }
                         </select>
@@ -116,7 +116,7 @@ export function LayoutForm() {
                             className="form-select"
                             aria-label="В какую раскладку сконвертировать"
                             >
-                            { Object.keys(langs).map((lang) => 
+                            { Object.keys(langs).map((lang) =>
                                 <option key={lang} value={lang}>{langs[lang as keyof typeof langs]}</option>
                             ) }
                         </select>
