@@ -27,7 +27,7 @@ export function EmojiPage() {
         site_name: 'Typing.su'
     }
 
-    const changeHandler = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setValue(event.target.value);
     }
 

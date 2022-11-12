@@ -8,7 +8,7 @@ import DarkMode from '../DarkMode';
 
 export function Navigation() {
     return (
-        <Navbar bg="light" variant="light" expand="lg">
+        <Navbar collapseOnSelect bg="light" variant="light" expand="lg">
             <Container>
                 <Navbar.Brand as={NavLink} to="/">
                     <span>Typing</span><span className="red">.su</span>
@@ -18,7 +18,6 @@ export function Navigation() {
                     <Nav
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
-                        navbarScroll
                     >
                         <Nav.Link
                             as={NavLink}

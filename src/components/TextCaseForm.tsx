@@ -41,7 +41,7 @@ export function TextCaseForm() {
         setValueDecoded(convertCase(value, valueRadioConvertTo));
     }
 
-    const changeHandler = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setValue(event.target.value);
         decode(event.target.value, valueRadioConvertTo);
     }

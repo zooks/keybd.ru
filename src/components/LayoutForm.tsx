@@ -18,9 +18,13 @@ export function LayoutForm() {
         setValueDecoded(convert(value, valueSelectEnc, valueSelectDec));
     }
 
-    const changeHandler = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setValue(event.target.value);
         decode(event.target.value);
+    }
+
+    const changeHandler2 = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setValueDecoded(event.target.value);
     }
 
     function handleSelect(event: React.FormEvent<HTMLSelectElement>) {
@@ -78,12 +82,11 @@ export function LayoutForm() {
                         <label className="form-label" htmlFor="decoded">Восстановленный текст</label>
                         <textarea
                             id="decoded"
-                            onChange={changeHandler}
+                            onChange={changeHandler2}
                             value={valueDecoded}
                             className="form-control"
                             cols={50}
                             rows={12}
-                            readOnly
                         />
                     </fieldset>
                 </Col>
