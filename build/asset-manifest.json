@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.16df14cd.css",
-    "main.js": "/static/js/main.022306e9.js",
+    "main.css": "/static/css/main.efbe7922.css",
+    "main.js": "/static/js/main.9f25080f.js",
     "static/media/keyboard-829330_1920.jpg": "/static/media/keyboard-829330_1920.931234fadc5b7e28664f.jpg",
     "static/media/keyboard-829330_1920.webp": "/static/media/keyboard-829330_1920.1079f2b10a4228665e1b.webp",
     "index.html": "/index.html",
-    "main.16df14cd.css.map": "/static/css/main.16df14cd.css.map",
-    "main.022306e9.js.map": "/static/js/main.022306e9.js.map"
+    "main.efbe7922.css.map": "/static/css/main.efbe7922.css.map",
+    "main.9f25080f.js.map": "/static/js/main.9f25080f.js.map"
   },
   "entrypoints": [
-    "static/css/main.16df14cd.css",
-    "static/js/main.022306e9.js"
+    "static/css/main.efbe7922.css",
+    "static/js/main.9f25080f.js"
   ]
 }

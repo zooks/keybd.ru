@@ -133,12 +133,13 @@ export function TextCaseForm() {
                             onClick={() => {navigator.clipboard.writeText(valueDecoded)}}
                             variant="light"
                             type="button"
+                            className="me-2"
                             >
                             <FontAwesomeIcon icon={faCopy} title="copy" /> Копировать
-                        </Button>{' '}
+                        </Button>
                         <Button variant="light" onClick={clearForms}>
                             Очистить
-                        </Button>{' '}
+                        </Button>
                     </fieldset>
                 </Col>
             </Row>

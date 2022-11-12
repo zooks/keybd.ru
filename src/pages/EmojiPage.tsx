@@ -72,12 +72,13 @@ export function EmojiPage() {
                                         onClick={() => {navigator.clipboard.writeText(value)}}
                                         variant="light"
                                         type="button"
+                                        className="me-2"
                                         >
                                         <FontAwesomeIcon icon={faCopy} title="copy" /> Копировать
-                                    </Button>{' '}
+                                    </Button>
                                     <Button variant="light" onClick={clearForms}>
                                         Очистить
-                                    </Button>{' '}
+                                    </Button>
                                 </fieldset>
                             </Col>
                         </Row>

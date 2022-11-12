@@ -121,23 +121,29 @@ export function LayoutForm() {
                             ) }
                         </select>
                     </fieldset>
-                    <fieldset className="mb-3">
-                        <Button
-                            variant="info"
-                            type="button"
-                            onClick={handleClick}
-                            >
-                            <FontAwesomeIcon icon={faBolt} title="start" /> Старт!</Button>{' '}
-                        <Button
-                            onClick={() => {navigator.clipboard.writeText(valueDecoded)}}
-                            variant="light"
-                            type="button"
-                            >
-                            <FontAwesomeIcon icon={faCopy} title="copy" /> Копировать
-                        </Button>{' '}
-                        <Button variant="light" onClick={clearForms}>
-                            Очистить
-                        </Button>{' '}
+                    <fieldset className="fieldset_wide">
+                        <div className="mb-3">
+                            <Button
+                                onClick={handleClick}
+                                variant="info"
+                                type="button"
+                                className="me-2"
+                                >
+                                <FontAwesomeIcon icon={faBolt} title="start" /> Старт!</Button>
+                        </div>
+                        <div className="mb-3">
+                            <Button
+                                onClick={() => {navigator.clipboard.writeText(valueDecoded)}}
+                                variant="light"
+                                type="button"
+                                className="me-2"
+                                >
+                                <FontAwesomeIcon icon={faCopy} title="copy" /> Копировать
+                            </Button>
+                            <Button variant="light" onClick={clearForms}>
+                                Очистить
+                            </Button>
+                        </div>
                     </fieldset>
                 </Col>
             </Row>

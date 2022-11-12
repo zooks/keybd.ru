@@ -298,6 +298,32 @@ span.emoji {
   font-family: Segoe UI Emoji;
 }
 
+.fieldset_wide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: 576px) {
+    justify-content: flex-start;
+  }
+
+  // > div {
+  //   margin-right: 10px;
+  //   &:last-child {
+  //     margin-right: 0;
+  //   }
+  // }
+
+  &_start {
+
+  }
+  &_end {
+
+  }
+}
+
+
+
 .btn {
   .svg-inline--fa {
     color: var(--bs-gray-600);
