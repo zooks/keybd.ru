@@ -12,7 +12,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faWindows} from '@fortawesome/free-brands-svg-icons';
 import {faCircleExclamation} from '@fortawesome/free-solid-svg-icons';
-import {faCopy, faBolt} from '@fortawesome/free-solid-svg-icons';
+import {faCopy} from '@fortawesome/free-solid-svg-icons';
 import {emojiGroups} from '../EmojiList';
 
 export function EmojiPage() {

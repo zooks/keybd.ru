@@ -25,13 +25,10 @@ export function TextCaseForm() {
                 }).join('');
 
                 return resultText;
-                break;
             case 'toUpper':
                 return text.toUpperCase();    
-                break;
             case 'toLower':
                 return text.toLowerCase();
-                break;
             default:
                 return text;
         }
