@@ -8,7 +8,7 @@ import DarkMode from '../DarkMode';
 
 export function Navigation() {
     return (
-        <Navbar collapseOnSelect bg="light" variant="light" expand="lg">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
                 <Navbar.Brand as={NavLink} to="/">
                     <span>Typing</span><span className="red">.su</span>
@@ -17,14 +17,10 @@ export function Navigation() {
                 <Navbar.Collapse id="navbarSupportedContent">
                     <Nav
                         className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
                     >
-                        <Nav.Link
-                            as={NavLink}
-                            to="/"
-                        >Раскладка</Nav.Link>
-                        <Nav.Link as={NavLink} to="/emoji">Эмоджи</Nav.Link>
-                        <Nav.Link as={NavLink} to="/text-case">Регистр текста</Nav.Link>
+                        <Nav.Link as={NavLink} to="/" eventKey="0">Раскладка</Nav.Link>
+                        <Nav.Link as={NavLink} to="/emoji" eventKey="1">Эмоджи</Nav.Link>
+                        <Nav.Link as={NavLink} to="/text-case" eventKey="2">Регистр текста</Nav.Link>
                     </Nav>
                     <div className="navbar-collapse-end">
                         <DarkMode />
