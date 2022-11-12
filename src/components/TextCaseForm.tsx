@@ -78,7 +78,6 @@ export function TextCaseForm() {
                             autoComplete="off" autoCorrect="off" autoCapitalize="off"
                             spellCheck="false"
                             placeholder="Вставьте сюда текст в неправильной раскладке"
-                            autoFocus
                         />
                     </fieldset>
                 </Col>
