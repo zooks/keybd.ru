@@ -4,9 +4,13 @@ import {MainPage} from "./pages/MainPage";
 import {EmojiPage} from "./pages/EmojiPage";
 import {TextCasePage} from "./pages/TextCasePage";
 import {NotFoundPage} from "./pages/NotFoundPage";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import './App.scss';
 import {Navigation} from "./components/Navigation";
 import {Footer} from "./components/Footer";
+
+config.autoAddCss = false;
 
 function App() {
 
