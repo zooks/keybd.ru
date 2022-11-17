@@ -1,6 +1,6 @@
 {
   "short_name": "Typing.su",
-  "name": "Typing.su: convert the text when you forgot to switch your keyboard layout",
+  "name": "Keyboard layout converter",
   "icons": [
     {
       "src": "favicon.ico",
