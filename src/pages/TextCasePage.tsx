@@ -27,12 +27,13 @@ export function TextCasePage() {
         <div>
             <Helmet>
                 <title>{seoData.title}</title>
+                <link rel="canonical" href="https://typing.su/text-case" />
                 <meta name="description" content={seoData.description} />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={seoData.title} />
                 <meta property="og:description" content={seoData.description} />
-                <meta property="og:url" content="https://typing.su/" />
+                <meta property="og:url" content="https://typing.su/text-case" />
                 <meta property="og:site_name" content={seoData.site_name} />
             </Helmet>
 

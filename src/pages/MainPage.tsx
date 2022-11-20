@@ -46,6 +46,7 @@ export function MainPage() {
         <div>
             <Helmet>
                 <title>{seoData.title}</title>
+                <link rel="canonical" href="https://typing.su/" />
                 <meta name="description" content={seoData.description} />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:type" content="website" />
