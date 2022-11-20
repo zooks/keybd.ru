@@ -35,6 +35,8 @@ export function TextCasePage() {
                 <meta property="og:description" content={seoData.description} />
                 <meta property="og:url" content="https://typing.su/text-case" />
                 <meta property="og:site_name" content={seoData.site_name} />
+                <meta property="og:image" content="/logo512.png"></meta>
+                <meta property="og:image:type" content="image/png" />
             </Helmet>
 
             <DocsHeader

@@ -51,6 +51,8 @@ export function EmojiPage() {
                 <meta property="og:description" content={seoData.description} />
                 <meta property="og:url" content="https://typing.su/emoji" />
                 <meta property="og:site_name" content={seoData.site_name} />
+                <meta property="og:image" content="/logo512.png"></meta>
+                <meta property="og:image:type" content="image/png" />
             </Helmet>
             <DocsHeader title="Клавиатура эмодзи (Emoji)" lead="Эмодзи — это цветные пиктограммы, которые используются в тексте для выражения эмоций." />
             <main>
