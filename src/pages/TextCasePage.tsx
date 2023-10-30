@@ -20,20 +20,20 @@ export function TextCasePage() {
     const seoData = {
         title: 'Онлайн смена регистра текста: с прописных на строчные и со строчных на прописные буквы',
         description: 'Перевод регистра строки онлайн для текста набранного капсом: если вы случайно нажали Caps Lock на клавиатуре.',
-        site_name: 'Typing.su'
+        site_name: 'Keybd.ru'
     }
 
     return (
         <div>
             <Helmet>
                 <title>{seoData.title}</title>
-                <link rel="canonical" href="https://typing.su/text-case" />
+                <link rel="canonical" href="https://keybd.ru/text-case" />
                 <meta name="description" content={seoData.description} />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={seoData.title} />
                 <meta property="og:description" content={seoData.description} />
-                <meta property="og:url" content="https://typing.su/text-case" />
+                <meta property="og:url" content="https://keybd.ru/text-case" />
                 <meta property="og:site_name" content={seoData.site_name} />
                 <meta property="og:image" content="/logo512.png"></meta>
                 <meta property="og:image:type" content="image/png" />

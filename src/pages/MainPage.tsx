@@ -39,20 +39,20 @@ export function MainPage() {
     const seoData = {
         title: 'Онлайн переключение раскладки клавиатуры: с русского на английский (16 языков)',
         description: 'Перевод раскладки онлайн для текста набранного в неправильной раскладке: если вы забыли переключить раскладку клавиатуры.',
-        site_name: 'Typing.su'
+        site_name: 'Keybd.ru'
     }
 
     return (
         <div>
             <Helmet>
                 <title>{seoData.title}</title>
-                <link rel="canonical" href="https://typing.su/" />
+                <link rel="canonical" href="https://keybd.ru/" />
                 <meta name="description" content={seoData.description} />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={seoData.title} />
                 <meta property="og:description" content={seoData.description} />
-                <meta property="og:url" content="https://typing.su/" />
+                <meta property="og:url" content="https://keybd.ru/" />
                 <meta property="og:site_name" content={seoData.site_name} />
                 <meta property="og:image" content="/logo512.png"></meta>
                 <meta property="og:image:type" content="image/png" />

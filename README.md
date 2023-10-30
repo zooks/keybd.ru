@@ -1,4 +1,4 @@
-# [Typing.su](https://typing.su)
+# [Keybd.ru](https://keybd.ru)
 If you forgot to switch your keyboard layout.
 
 ## Supported languages

@@ -24,7 +24,7 @@ export function EmojiPage() {
     const seoData = {
         title: 'Онлайн эмодзи для набора с компьютера, скопировать эмодзи, клавиатура эмодзи',
         description: 'Набрать смайлы эмодзи/эмоджи на компьютере. Коды не нужны!',
-        site_name: 'Typing.su'
+        site_name: 'Keybd.ru'
     }
 
     const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -43,13 +43,13 @@ export function EmojiPage() {
         <>
             <Helmet>
                 <title>{seoData.title}</title>
-                <link rel="canonical" href="https://typing.su/emoji" />
+                <link rel="canonical" href="https://keybd.ru/emoji" />
                 <meta name="description" content={seoData.description} />
                 <meta property="og:locale" content="ru_RU" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={seoData.title} />
                 <meta property="og:description" content={seoData.description} />
-                <meta property="og:url" content="https://typing.su/emoji" />
+                <meta property="og:url" content="https://keybd.ru/emoji" />
                 <meta property="og:site_name" content={seoData.site_name} />
                 <meta property="og:image" content="/logo512.png"></meta>
                 <meta property="og:image:type" content="image/png" />

@@ -11,7 +11,7 @@ export function Navigation() {
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
                 <Navbar.Brand as={NavLink} to="/">
-                    <span>Typing</span><span className="red">.su</span>
+                    <span>Keybd</span><span className="d-none">.</span><span className="red">ru</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarSupportedContent" />
                 <Navbar.Collapse id="navbarSupportedContent">
