@@ -12,18 +12,13 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.6",
-    "@types/node": "^20.8.9",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
-    "@types/react-helmet": "^6.1.8",
     "bootstrap": "^5.3.2",
-    "react": "^18.2.0",
+    "react": "^18",
     "react-bootstrap": "^2.9.1",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
-    "typescript": "^5.2.2",
     "web-vitals": "^3.5.0"
   },
   "scripts": {
@@ -51,6 +46,17 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "typescript": "^5.2.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-helmet": "^6.1.8",
+    "eslint": "^8"
+  },
+  "overrides": {
+    "react-scripts": {
+      "typescript": "^5"
+    }
   }
 }
