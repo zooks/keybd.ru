@@ -21,6 +21,7 @@ export function Navigation() {
                         <Nav.Link as={NavLink} to="/" eventKey="0">Раскладка</Nav.Link>
                         <Nav.Link as={NavLink} to="/emoji" eventKey="1">Эмоджи</Nav.Link>
                         <Nav.Link as={NavLink} to="/text-case" eventKey="2">Регистр текста</Nav.Link>
+                        <Nav.Link as={NavLink} to="/typograf" eventKey="3">Типограф</Nav.Link>
                     </Nav>
                     <div className="navbar-collapse-end">
                         <DarkMode />

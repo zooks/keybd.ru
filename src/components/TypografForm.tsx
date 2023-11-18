@@ -8,27 +8,95 @@ import Form from "react-bootstrap/Form";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCopy} from '@fortawesome/free-solid-svg-icons';
 
-export function TextCaseForm() {
+export function TypografForm() {
 
     const [value, setValue] = useState('');
     const [valueDecoded, setValueDecoded] = useState('');
     const [valueRadioConvertTo, setValueRadioConvertTo] = useState('auto');
 
     function convertCase (text: string, convertTo: string) {
+        
+        function replaceAll(text: string, search: string, replacement: string) {
+            let myRegExp = new Array;
+
+            const searchSymbol = ['^', '\n'];
+
+            searchSymbol.forEach((el) => {
+                myRegExp.push( new RegExp( el + search, 'g') );
+            });
+
+            myRegExp.forEach((el, i) => {
+                text = text.replace(myRegExp[i], searchSymbol[i] + replacement);
+            });
+
+            return text;
+        }
+
+        let resultText = text.replace(/"([^"]*)"/g, '«$1»')
+        .replace(/--/g, '—')
+        .replace(/- /g, '— ')
+        .replace(/([0-9]+)-([0-9]+)/g, '$1–$2')
+        .replace(/'/g, '’')
+        .replace(/\.\.\./g, '…')
+        .replace(/[ ]+/g, ' ')
+        .replace(/\t/g, ' ')
+        .replace(/^( )+/g, '')
+        .replace(/\n[ ]+/g, '\n')
+        .replace(/[​\u0301]/g, '')
+        .replace(/([0-9]+) (г\.)/g, '$1 г.')
+        .replace(/([0-9]+) (гг\.)/g, '$1 гг.')
+        .replace(/([0-9]+) год/g, '$1 год')
+
+
+
+        // resultText = replaceAll(resultText, '1\/2', ' ½');
+
 
         switch (convertTo) {
-            case 'auto':
-                const resultText = text.split('').map(function(char) {
-                    return char === char.toUpperCase()
-                        ? char.toLowerCase()
-                        : char.toUpperCase()
-                }).join('');
 
+            case 'auto':
                 return resultText;
-            case 'toUpper':
-                return text.toUpperCase();
-            case 'toLower':
-                return text.toLowerCase();
+            case 'symbols':
+                return resultText
+                .replace(/\(C\)/gi, '©')
+                .replace(/\(R\)/gi, '®')
+                .replace(/\(TM\)/gi, '™')
+                .replace(/\*/g, '•');
+            case 'number':
+                return resultText
+                .replace(/No\./g, '№')
+                .replace(/N([0-9]+)/g, '№$1');
+            case 'math':
+                return resultText
+                .replace(/\+-/g, '±')
+                .replace(/\-([0-9]+)/g, '−$1')
+                .replace(/([0-9]+) x ([0-9]+)/g, '$1 × $2')
+                .replace(/([0-9]+)x([0-9]+)/g, '$1×$2')
+                .replace(/(^|[^0-9]|−|\n)1\/4($|[^0-9]|\n)/g, '$1¼$2')
+                .replace(/(^|[^0-9]|−|\n)1\/2($|[^0-9]|\n)/g, '$1½$2')
+                .replace(/(^|[^0-9]|−|\n)3\/4($|[^0-9]|\n)/g, '$1¾$2')
+                .replace(/!=/g, '≠')
+                .replace(/<=/g, '≤')
+                .replace(/(^|[^=])>=/g, '$1≥')
+                .replace(/<=>/g, '⇔')
+                .replace(/<</g, '≪')
+                .replace(/>>/g, '≫')
+                .replace(/~=/g, '≅')
+
+
+
+            case 'curr':
+                return resultText
+                .replace(/([0-9]+) руб\./g, '$1 ₽')
+                .replace(/([0-9]+) р\./g, '$1 ₽')
+                .replace(/([0-9]+) грн\./g, '$1 ₴')
+                .replace(/([0-9]+) тнг\./g, '$1 ₸')
+                .replace(/([0-9]+) дрм\./g, '$1 ֏')
+                .replace(/([0-9]+) ман\./g, '$1 ₼')
+                .replace(/([0-9]+) EUR/g, '$1 €')
+                .replace(/([0-9]+) USD/g, '$1 $')
+
+
             default:
                 return text;
         }
@@ -54,9 +122,11 @@ export function TextCaseForm() {
     }
 
     const radioOptions = [
-        { key: 'a', text: 'Авто', value: 'auto' },
-        { key: 'u', text: 'В заглавные', value: 'toUpper' },
-        { key: 'l', text: 'В строчные', value: 'toLower' },
+        { key: 'a', text: 'Авто', value: 'auto', title: '" \' -- - ' },
+        { key: 's', text: '№', value: 'number', title: 'N1 No.' },
+        { key: 'n', text: '© ® •', value: 'symbols', title: '(c) (R) (TM) *' },
+        { key: 'm', text: '±', value: 'math', title: '+- - 1/4 1/2 3/4' },
+        { key: 'c', text: '₽', value: 'curr', title: 'р. руб. грн. USD EUR' },
       ]
 
     return (
@@ -74,7 +144,7 @@ export function TextCaseForm() {
                             rows={12}
                             autoComplete="off" autoCorrect="off" autoCapitalize="off"
                             spellCheck="false"
-                            placeholder="Вставьте сюда текст с неправильным регистром букв"
+                            placeholder="Вставьте сюда текст для типографики"
                         />
                     </fieldset>
                 </Col>
@@ -101,6 +171,7 @@ export function TextCaseForm() {
                                 <ToggleButton
                                     key={item.key}
                                     id={`radio-${item.key}`}
+                                    title={item.title}
                                     type="radio"
                                     variant="light"
                                     name="radio"
