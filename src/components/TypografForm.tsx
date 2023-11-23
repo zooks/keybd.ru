@@ -94,9 +94,9 @@ export function TypografForm() {
                 return resultText
                 .replace(/No\./g, '№')
                 .replace(/N([0-9]+)/g, '№$1')
-                .replace(/(numero)/g, '№')
-                .replace(/(sect)/g, '§')
-                .replace(/(para)/g, '¶')
+                .replace(/\(numero\)/g, '№')
+                .replace(/\(sect\)/g, '§')
+                .replace(/\(para\)/g, '¶')
             case 'math':
                 const fractions = '½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞';
                 const numbersRegExp = new RegExp(`([0-9${fractions}]+)–([0-9${fractions}]+)`, 'g');
