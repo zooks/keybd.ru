@@ -15,7 +15,7 @@ export function TypografForm() {
     const [valueRadioConvertTo, setValueRadioConvertTo] = useState('auto');
 
     function convertCase (text: string, convertTo: string) {
-        
+        /*
         function replaceAll(text: string, search: string, replacement: string) {
             let myRegExp = new Array;
 
@@ -31,18 +31,24 @@ export function TypografForm() {
 
             return text;
         }
+        */
 
-        let resultText = text.replace(/"([^"]*)"/g, '«$1»')
+        let resultText = text
+        .replace(/"([^"]*)"/g, '«$1»')
+        // .replace(/«([^«»]+) »([^«»]+)«([^«»]+)»/g, '«$1 „$2“$3»')
+        .replace(/ »([^«»]+)«/g, ' „$1“')
         .replace(/--/g, '—')
         .replace(/- /g, '— ')
         .replace(/([0-9]+)-([0-9]+)/g, '$1–$2')
         .replace(/'/g, '’')
         .replace(/\.\.\./g, '…')
+        .replace(/([^0-9]),/g, '$1, ') // comma spaces
         .replace(/[ ]+/g, ' ')
         .replace(/\t/g, ' ')
         .replace(/^( )+/g, '')
         .replace(/\n[ ]+/g, '\n')
         .replace(/[​\u0301]/g, '')
+        .replace(/ ,/g, ',') // comma spaces
         .replace(/([0-9]+) (г\.)/g, '$1 г.')
         .replace(/([0-9]+) (гг\.)/g, '$1 гг.')
         .replace(/([0-9]+) год/g, '$1 год')
@@ -51,6 +57,28 @@ export function TypografForm() {
 
         // resultText = replaceAll(resultText, '1\/2', ' ½');
 
+
+        function powerSymbols(num: string) {
+            const powerSymbolsArr = '⁰¹²³⁴⁵⁶⁷⁸⁹ⁿⁱ'.split('');
+            let degree = '';
+
+            num.split('').forEach(function (el) {
+
+                switch (el) {
+                    case 'n':
+                        degree += powerSymbolsArr[10];
+                        break;
+                    case 'i':
+                        degree += powerSymbolsArr[11];
+                        break;
+                    default:
+                        degree += powerSymbolsArr[Number(el)];
+                }
+            });
+
+            return degree;
+
+        }
 
         switch (convertTo) {
 
@@ -65,16 +93,68 @@ export function TypografForm() {
             case 'number':
                 return resultText
                 .replace(/No\./g, '№')
-                .replace(/N([0-9]+)/g, '№$1');
+                .replace(/N([0-9]+)/g, '№$1')
+                .replace(/(numero)/g, '№')
+                .replace(/(sect)/g, '§')
+                .replace(/(para)/g, '¶')
             case 'math':
+                const fractions = '½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞';
+                const numbersRegExp = new RegExp(`([0-9${fractions}]+)–([0-9${fractions}]+)`, 'g');
+                const numbersRegExpSpace = new RegExp(`([0-9${fractions}]+) — ([0-9${fractions}]+)`, 'g');
+
+
                 return resultText
                 .replace(/\+-/g, '±')
-                .replace(/\-([0-9]+)/g, '−$1')
+                .replace(/\+—/g, '±')
+                .replace(/-([0-9]+)/g, '−$1')
                 .replace(/([0-9]+) x ([0-9]+)/g, '$1 × $2')
                 .replace(/([0-9]+)x([0-9]+)/g, '$1×$2')
-                .replace(/(^|[^0-9]|−|\n)1\/4($|[^0-9]|\n)/g, '$1¼$2')
-                .replace(/(^|[^0-9]|−|\n)1\/2($|[^0-9]|\n)/g, '$1½$2')
-                .replace(/(^|[^0-9]|−|\n)3\/4($|[^0-9]|\n)/g, '$1¾$2')
+                .replace(/([0-9]+) \* ([0-9]+)/g, '$1 × $2')
+                .replace(/([0-9]+)\*([0-9]+)/g, '$1×$2')
+                .replace(/(^|[^0-9]|−|\n)1\/2($|[^0-9]|\n)/g, '$1½$2') // ½
+                .replace(/(^|[^0-9]|−|\n)1\/3($|[^0-9]|\n)/g, '$1⅓$2') // ⅓
+                .replace(/(^|[^0-9]|−|\n)1\/4($|[^0-9]|\n)/g, '$1¼$2') // ¼
+                .replace(/(^|[^0-9]|−|\n)1\/5($|[^0-9]|\n)/g, '$1⅕$2') // ⅕
+                .replace(/(^|[^0-9]|−|\n)1\/6($|[^0-9]|\n)/g, '$1⅙$2') // ⅙
+                .replace(/(^|[^0-9]|−|\n)1\/7($|[^0-9]|\n)/g, '$1⅐$2') // ⅐
+                .replace(/(^|[^0-9]|−|\n)1\/8($|[^0-9]|\n)/g, '$1⅛$2') // ⅛
+                .replace(/(^|[^0-9]|−|\n)1\/9($|[^0-9]|\n)/g, '$1⅑$2') // ⅑
+                .replace(/(^|[^0-9]|−|\n)1\/10($|[^0-9]|\n)/g, '$1⅒$2') // ⅒
+                
+                .replace(/(^|[^0-9]|−|\n)2\/3($|[^0-9]|\n)/g, '$1⅔$2') // ⅔
+                .replace(/(^|[^0-9]|−|\n)2\/5($|[^0-9]|\n)/g, '$1⅖$2') // ⅖
+                
+                .replace(/(^|[^0-9]|−|\n)3\/4($|[^0-9]|\n)/g, '$1¾$2') // ¾
+                .replace(/(^|[^0-9]|−|\n)3\/5($|[^0-9]|\n)/g, '$1⅗$2') // ⅗
+                .replace(/(^|[^0-9]|−|\n)3\/8($|[^0-9]|\n)/g, '$1⅜$2') // ⅜
+
+                .replace(/(^|[^0-9]|−|\n)4\/5($|[^0-9]|\n)/g, '$1⅘$2') // ⅘
+                
+                .replace(/(^|[^0-9]|−|\n)5\/6($|[^0-9]|\n)/g, '$1⅚$2') // ⅚
+                .replace(/(^|[^0-9]|−|\n)5\/8($|[^0-9]|\n)/g, '$1⅝$2') // ⅝
+
+                .replace(/(^|[^0-9]|−|\n)7\/8($|[^0-9]|\n)/g, '$1⅞$2') // ⅞
+
+
+                .replace(numbersRegExp, '$1−$2')
+                .replace(numbersRegExpSpace, '$1 − $2')
+
+                .replace(/([0-9]+)\/([0-9]+)/g, '$1 ÷ $2')
+                .replace(/f\(([^()]+)\)/g, 'ƒ($1)')
+                // abbr
+                .replace(/\(deg\)/g, '°')
+                .replace(/PI/g, 'π')
+                .replace(/\(sum\)/g, 'Σ')
+                .replace(/\(infin\)/g, '∞')
+                .replace(/PI/g, 'π')
+
+                // power
+
+                .replace(/([0-9,.]+)\^([0-9ni]+)/g, function (match, capture1, capture2) {
+                    return capture1 + powerSymbols(capture2);
+                })
+
+
                 .replace(/!=/g, '≠')
                 .replace(/<=/g, '≤')
                 .replace(/(^|[^=])>=/g, '$1≥')
@@ -123,9 +203,9 @@ export function TypografForm() {
 
     const radioOptions = [
         { key: 'a', text: 'Авто', value: 'auto', title: '" \' -- - ' },
-        { key: 's', text: '№', value: 'number', title: 'N1 No.' },
+        { key: 's', text: '№', value: 'number', title: 'N1 No. (numero) (sect) (para)' },
         { key: 'n', text: '© ® •', value: 'symbols', title: '(c) (R) (TM) *' },
-        { key: 'm', text: '±', value: 'math', title: '+- - 1/4 1/2 3/4' },
+        { key: 'm', text: '±', value: 'math', title: '+- - 1/4 1/2 3/4 2^2 f(x) 25 (deg)C' },
         { key: 'c', text: '₽', value: 'curr', title: 'р. руб. грн. USD EUR' },
       ]
 
