@@ -140,6 +140,7 @@ export function TypografForm() {
                 .replace(numbersRegExpSpace, '$1 − $2')
 
                 .replace(/([0-9]+)\/([0-9]+)/g, '$1 ÷ $2')
+                .replace(/f\(x\)/g, 'ƒ(𝔁)')
                 .replace(/f\(([^()]+)\)/g, 'ƒ($1)')
                 // abbr
                 .replace(/\(deg\)/g, '°')
