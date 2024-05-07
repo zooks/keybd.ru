@@ -19,6 +19,10 @@ $browser-context: 16;
 //   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 // }
 
+body {
+  min-width: 20em; // 320px
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -118,7 +122,6 @@ kbd {
 .bs-docs-header {
   min-height: 112px;
 
-  background: #adb0b7 url(../img/keyboard-829330_1920.jpg) no-repeat;
   background: #adb0b7 url(../img/keyboard-829330_1920.webp) no-repeat;
 
   background-size: cover;
@@ -127,6 +130,10 @@ kbd {
   background-color: #e9ecef;
 
   // border-radius: .3rem
+
+  @media (max-width: 34em) {
+    background: #adb0b7 url(../img/keyboard-829330_576.webp) no-repeat;
+  }
 
   h1, p {
     color: white;
@@ -260,6 +267,10 @@ main {
   }
 }
 
+.nav-tabs {
+  border-bottom: none;
+}
+
 .nav-tabs .nav-link {
   transition: none;
 }
@@ -318,6 +329,13 @@ span.emoji {
 
 .btn-light {
   --bs-btn-border-color: #ced4da;
+}
+
+.btn-info {
+  font-weight: bold;
+  .svg-inline--fa {
+    color: var(--bs-gray-900);
+  }
 }
 
 // Icons
