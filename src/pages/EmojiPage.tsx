@@ -59,10 +59,10 @@ export function EmojiPage() {
             <main>
                 <Container>
 
-                    <Form className="mb-1 sticky-sm-bottom" id="convert-form">
+                    <Form className="mb-1 sticky-top" id="convert-form">
                         <Row>
                             <Col sm={12}>
-                                <fieldset className="mb-3">
+                                <fieldset className="my-3">
                                     <Form.Control
                                         value={value}
                                         onChange={changeHandler}

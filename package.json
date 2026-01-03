@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "sass": "^1.97.1",
     "typescript": "^5.9.3",
     "@types/node": "^25",
@@ -53,6 +54,15 @@
     "@types/react-dom": "^19",
     "@types/react-helmet": "^6.1.11",
     "eslint": "^9"
+=======
+    "@types/node": "^20.12.8",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-helmet": "^6.1.11",
+    "eslint": "^8.57.0",
+    "sass": "^1.76.0",
+    "typescript": "^5.4.5"
+>>>>>>> bd2886888f7367eee1387d4e52041102ee7040f3
   },
   "overrides": {
     "react-scripts": {

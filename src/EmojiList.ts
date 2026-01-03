@@ -1,6 +1,6 @@
 export const emojiGroups = [
     {
-        title: 'Популярные',
+        title: '✨ Популярные',
         // '❤️ 😂 🤣 ✨ 😍 😮 😭 🥺 🙏 🥰 😊 😁 😆 🤔 😐 ❤️‍🔥 💕 👍 👋 💯'
         content: {
             '❤️': 'Red Heart',
@@ -26,7 +26,7 @@ export const emojiGroups = [
         }
     },
     {
-        title: 'Смайлы и люди',
+        title: '🙂 Смайлы и люди',
         content: {
             '😀': 'Grinning Face',
             '😃': 'Grinning Face with Big Eyes',
@@ -514,7 +514,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Природа и животные',
+        title: '🌸 Природа и животные',
         content: {
             '🙈': 'See-No-Evil Monkey',
             '🙉': 'Hear-No-Evil Monkey',
@@ -727,7 +727,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Еда и напитки',
+        title: '🎂 Еда и напитки',
         content: {
             '🍇': 'Grapes',
             '🍈': 'Melon',
@@ -858,7 +858,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Спорт',
+        title: '🏀 Спорт',
         content: {
             '🕴️': 'Person in Suit Levitating',
             '🧗': 'Person Climbing',
@@ -977,7 +977,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Путешествия',
+        title: '🚘 Путешествия',
         content: {
             '🚣': 'Person Rowing Boat',
             '🗾': 'Map of Japan',
@@ -1118,7 +1118,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Значки',
+        title: '👑 Значки',
         content: {
             '💌': 'Love Letter',
             '🕳️': 'Hole',
@@ -1359,7 +1359,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Символы',
+        title: '🔷 Символы',
         content: {
             '💘': 'Heart with Arrow',
             '💝': 'Heart with Ribbon',
@@ -1658,7 +1658,7 @@ export const emojiGroups = [
         },
     },
     {
-        title: 'Флаги',
+        title: '🚩 Флаги',
         content: {
             '🇦🇨': 'Flag: Ascension Island',
             '🇦🇩': 'Flag: Andorra',
