@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Перенаправление на index.html для определенных путей
+    RewriteRule ^emoji/?$ /index.html [L]
+    RewriteRule ^text-case/?$ /index.html [L]
+    RewriteRule ^typograf/?$ /index.html [L]
+    # RewriteRule ^$ /index.html [L]
+</IfModule>
+
+
+<IfModule mod_headers.c>
+Header always set Content-Security-Policy "default-src 'none'; script-src 'self' https://mc.yandex.ru https://mc.yandex.com https://www.googletagmanager.com; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com; img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com; style-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' data:;manifest-src 'self';frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+Header always set Cache-Control "no-cache"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy: "strict-origin-when-cross-origin"
+</IfModule>

@@ -48,6 +48,7 @@
     color: black;
     background: white;
     border-bottom: 1px solid #b5b5b5;
+    
 
     span {
         font-size: 0.75em;
@@ -95,6 +96,32 @@
             font-size: 0.75em;
         }
     }
+}
+
+.keyboard.vintage {
+    --margins: .2125em;
+   .keyboardKey {
+        border-radius: 100px;
+        border: 4px solid silver;
+        border-style: inset;
+        // box-shadow: inset 0 0 10px #0f0;
+        box-shadow: inset -14px -14px 14px rgba(255,255,255,.2);
+        flex: 0 1 2.5em;
+
+        span {
+            font-size: 1.1em;
+            font-weight: 400; 
+            white-space: pre-line;
+        }
+
+        &_smaller {
+            span {
+                font-size: 0.5em;
+            }
+        }
+
+    }
+    
 }
 
 [data-theme="dark"] {

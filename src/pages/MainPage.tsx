@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import {Helmet} from "react-helmet";
 import {DocsHeader} from "../components/DocsHeader";
 import Container from "react-bootstrap/Container";
@@ -12,8 +12,12 @@ import { LayoutKeyboard } from '../components/LayoutKeyboard';
 
 export function MainPage() {
 
+    const [keyboardLang, setKeyboardLang] = useState('ru');
+
     const langs = {
         'ru': 'Русский',
+        'ru_typewriter': 'Русский (машинопись)',
+        'ru_typewriter_old': 'Русский (дореволюционный)',
         'en': 'English (Английский)',
         'uk': 'Українська (Украинский)',
         'be': 'Беларуская (Белорусский)',
@@ -82,10 +86,16 @@ export function MainPage() {
                     </div>
                     <br/>
 
-                    <LayoutForm></LayoutForm>
+                    <LayoutForm
+                        keyboardLang={keyboardLang}
+                        setKeyboardLang={setKeyboardLang}
+                    />
 
                     <h2 className="sr-only">Русская клавиатура онлайн</h2>
-                    <LayoutKeyboard></LayoutKeyboard>
+
+                    <LayoutKeyboard
+                        lang={keyboardLang}
+                    />
 
                     <Features list={featuresList}></Features>
 

@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="bd-footer bg-light">
             <div className="container">
-                <p className="float-sm-right">© 2023 <a className="text-reset" href="https://zooks.ru"
+                <p className="float-sm-right">© 2026 <a className="text-reset" href="https://zooks.ru"
                                                                    rel="nofollow">Zooks</a></p>
             </div>
         </footer>

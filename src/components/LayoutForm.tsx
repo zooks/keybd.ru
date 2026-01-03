@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
@@ -7,15 +7,20 @@ import {convert} from "../Convert";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCopy, faBolt} from '@fortawesome/free-solid-svg-icons';
 
-export function LayoutForm() {
+type Props = {
+    keyboardLang: string;
+    setKeyboardLang: (v: string) => void;
+};
+
+export function LayoutForm({ keyboardLang, setKeyboardLang }: Props) {
 
     const [value, setValue] = useState('');
     const [valueDecoded, setValueDecoded] = useState('');
     const [valueSelectEnc, setValueSelectEnc] = useState('auto');
-    const [valueSelectDec, setValueSelectDec] = useState('ru');
+    // const [valueSelectDec, setValueSelectDec] = useState('ru');
 
     function decode(value: string) {
-        setValueDecoded(convert(value, valueSelectEnc, valueSelectDec));
+        setValueDecoded(convert(value, valueSelectEnc, keyboardLang));
     }
 
     const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -42,6 +47,8 @@ export function LayoutForm() {
 
     const langs = {
         'ru': '🇷🇺  Русский',
+        'ru_typewriter': '🇷🇺  Русский (машинопись)',
+        'ru_typewriter_old': '🇷🇺  Русский (дореволюционный)',
         'en': '🇺🇸  English (Английский)',
         'uk': '🇺🇦  Українська (Украинский)',
         'be': '🇧🇾  Беларуская (Белорусский)',
@@ -57,6 +64,12 @@ export function LayoutForm() {
         'tk': '🇹🇲  Türkmen (Туркменский)',
         'et': '🇪🇪  Eesti (Эстонский)'
     }
+
+    useEffect(() => {
+        if (value) {
+            decode(value);
+        }
+    }, [keyboardLang]);
 
     return (
         <Form className="mb-3" id="convert-form">
@@ -111,8 +124,8 @@ export function LayoutForm() {
                 <Col md={6}>
                     <fieldset className="mb-3">
                         <select
-                            value={valueSelectDec}
-                            onChange={(event) => setValueSelectDec(event.target.value)}
+                            value={keyboardLang}
+                            onChange={(e) => setKeyboardLang(e.target.value)}
                             className="form-select"
                             aria-label="В какую раскладку сконвертировать"
                             >

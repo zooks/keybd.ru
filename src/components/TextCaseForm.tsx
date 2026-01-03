@@ -16,6 +16,18 @@ export function TextCaseForm() {
 
     function convertCase (text: string, convertTo: string) {
 
+        const capitalizeString = (str: string): string => {
+        
+            if (!str || typeof str !== 'string') return str || '';
+            return str.toLowerCase()
+                .split(' ')
+                .map(word => {
+                    if (!word) return word;
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                })
+                .join(' ');
+        };
+
         switch (convertTo) {
             case 'auto':
                 const resultText = text.split('').map(function(char) {
@@ -29,6 +41,8 @@ export function TextCaseForm() {
                 return text.toUpperCase();
             case 'toLower':
                 return text.toLowerCase();
+            case 'capitalize':
+                return capitalizeString(text);
             default:
                 return text;
         }
@@ -54,9 +68,10 @@ export function TextCaseForm() {
     }
 
     const radioOptions = [
-        { key: 'a', text: 'Авто', value: 'auto' },
-        { key: 'u', text: 'В заглавные', value: 'toUpper' },
-        { key: 'l', text: 'В строчные', value: 'toLower' },
+        { key: 'a', text: 'Авто', label: 'Авто', value: 'auto' },
+        { key: 'u', text: 'В заглавные', label: 'a → A', value: 'toUpper' },
+        { key: 'l', text: 'В строчные', label: 'A → a', value: 'toLower' },
+        { key: 'c', text: 'Капитализация', label: 'abc → Abc', value: 'capitalize' },
       ]
 
     return (
@@ -107,8 +122,9 @@ export function TextCaseForm() {
                                     value={item.value}
                                     checked={valueRadioConvertTo === item.value}
                                     onChange={handleCheck}
+                                    title={item.text || item.label || ''}
                                 >
-                                    {item.text}
+                                    {item.label || item.text}
                                 </ToggleButton>
                             ))}
                         </ButtonGroup>
