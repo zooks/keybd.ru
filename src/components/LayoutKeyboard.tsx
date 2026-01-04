@@ -21,7 +21,7 @@ export function LayoutKeyboard({ lang }: Props) {
         { range: [0, 0], startBtns: ['Ctrl', 'Win', 'Alt'], endBtns: ['Alt', 'Win', 'Ctrl'], centerBtn: ' ' },
     ];
 
-    const rowBreaks_old = [
+    const rowBreaks_retro = [
         { range: [34, 47], startBtns: [], endBtns: ['→'] },
         { range: [0, 13], startBtns: ['Табуляторъ'], endBtns: [] },
         { range: [13, 24], startBtns: ['Замокъ\n верхняго\n регистра'], endBtns: [''] },

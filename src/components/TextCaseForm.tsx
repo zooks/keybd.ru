@@ -77,7 +77,7 @@ export function TextCaseForm() {
     return (
         <Form className="mb-5" id="convert-form">
             <Row>
-                <Col sm={6}>
+                <Col xs={{ order: 1 }}  sm={{ span: 6, order: 0 }}>
                     <fieldset className="mb-3">
                         <label className="form-label" htmlFor="coded">Исходный текст</label>
                         <textarea
@@ -93,7 +93,7 @@ export function TextCaseForm() {
                         />
                     </fieldset>
                 </Col>
-                <Col sm={6}>
+                <Col xs={{ order: 1 }} sm={{ span: 6, order: 0 }}>
                     <fieldset className="mb-3">
                         <label className="form-label" htmlFor="decoded">Результат</label>
                         <textarea
@@ -107,9 +107,7 @@ export function TextCaseForm() {
                         />
                     </fieldset>
                 </Col>
-            </Row>
-            <Row>
-                <Col md={6}>
+                <Col xs={{ order: 0 }} md={6}>
                     <fieldset className="mb-3">
                         <ButtonGroup className="mb-2">
                             {radioOptions.map((item, index) => (
@@ -143,7 +141,7 @@ export function TextCaseForm() {
                         )} */}
                     </fieldset>
                 </Col>
-                <Col md={6}>
+                <Col xs={{ order: 1 }} sm={{ order: 0 }} md={6}>
                     <fieldset className="mb-3">
                         <Button
                             onClick={() => {navigator.clipboard.writeText(valueDecoded)}}

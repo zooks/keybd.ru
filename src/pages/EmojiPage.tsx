@@ -9,7 +9,6 @@ import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Helpers from 'react-bootstrap/helpers';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faWindows} from '@fortawesome/free-brands-svg-icons';
 import {faCircleExclamation} from '@fortawesome/free-solid-svg-icons';
@@ -59,7 +58,7 @@ export function EmojiPage() {
             <main>
                 <Container>
 
-                    <Form className="mb-1 sticky-top" id="convert-form">
+                    <Form className="emoji-form mb-1 sticky-top" id="convert-form">
                         <Row>
                             <Col sm={12}>
                                 <fieldset className="my-3">

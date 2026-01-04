@@ -74,7 +74,7 @@ export function LayoutForm({ keyboardLang, setKeyboardLang }: Props) {
     return (
         <Form className="mb-3" id="convert-form">
             <Row>
-                <Col sm={6}>
+                <Col xs={{ order: 0 }}  sm={{ span: 6, order: 0 }}>
                     <fieldset className="mb-3">
                         <label className="form-label" htmlFor="coded">Исходный текст</label>
                         <textarea
@@ -90,7 +90,7 @@ export function LayoutForm({ keyboardLang, setKeyboardLang }: Props) {
                         />
                     </fieldset>
                 </Col>
-                <Col sm={6}>
+                <Col xs={{ order: 1 }}  sm={{ span: 6, order: 0 }}>
                     <fieldset className="mb-3">
                         <label className="form-label" htmlFor="decoded">Восстановленный текст</label>
                         <textarea
@@ -103,9 +103,7 @@ export function LayoutForm({ keyboardLang, setKeyboardLang }: Props) {
                         />
                     </fieldset>
                 </Col>
-            </Row>
-            <Row>
-                <Col md={6}>
+                <Col xs={{ order: 0 }} md={6}>
                     <fieldset className="mb-3">
                         <select
                             value={valueSelectEnc}
@@ -121,7 +119,7 @@ export function LayoutForm({ keyboardLang, setKeyboardLang }: Props) {
                         </select>
                     </fieldset>
                 </Col>
-                <Col md={6}>
+                <Col xs={{ order: 1 }} md={6}>
                     <fieldset className="mb-3">
                         <select
                             value={keyboardLang}

@@ -10,8 +10,6 @@ interface KeyProps {
 
 export function Key({ symbol, className, onClick }: KeyProps) {
     
-    const lines = symbol.split('\n');
-
     return(
         <button
             className={`keyboardKey ${className} ` + ( symbol === 'Win' ? 'keyboardKey_symbol' : '' )}
